@@ -6,7 +6,7 @@ from django.conf import settings
 from .forms import OrderForm
 from .models import Order, OrderLineItem
 from products.models import Product
-from bag.contexts import bag_contents
+from basket.contexts import bag_contents
 
 import stripe
 import json
@@ -126,8 +126,8 @@ def checkout_success(request, order_number):
         Your order number is {order_number}. A confirmation \
         email will be sent to {order.email}.')
 
-    if 'bag' in request.session:
-        del request.session['bag']
+    if 'basket' in request.session:
+        del request.session['basket']
 
     template = 'checkout/checkout_success.html'
     context = {
