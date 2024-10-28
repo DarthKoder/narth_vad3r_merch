@@ -8,9 +8,9 @@ def basket_contents(request):
     basket_items =[]
     total = 0
     product_count = 0
-    bag = request.session.get('basket', {})
+    basket = request.session.get('basket', {})
     
-    for item_id, item_data in bag.items():
+    for item_id, item_data in basket.items():
         if isinstance(item_data, int):
             product = get_object_or_404(Product, pk=item_id)
             total += item_data * product.price
