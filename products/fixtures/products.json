@@ -1,0 +1,211 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "nv01",
+        "name": "NV Mask Hoodie",
+        "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+        "price": 46.00,
+        "category": 1,
+        "rating": 5,
+        "image": "media/nv01-mask-hoodie"
+      }
+    },
+
+    {
+        "pk": 2,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv02",
+          "name": "NV Text Hoodie",
+          "description": "Who knew that the softest hoodie you'll ever own comes with such a cool design. You won't regret buying this classic streetwear piece of apparel with a convenient pouch pocket and warm hood for chilly evenings.,• 100% cotton face,• 65% ring-spun cotton, 35% polyester,• Front pouch pocket,• Self-fabric patch on the backl,• Matching flat drawstrings,• 3-panel hood,• Blank product sourced from Pakistan,Disclaimer: This hoodie runs small. For the perfect fit, we recommend ordering one size larger than your usual size.",
+          "price": 46.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv02-text-hoodie"
+        }
+      },
+
+      {
+        "pk": 3,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv03",
+          "name": "NV Premium Jumper",
+          "description": "Looking for something special to stand out from the crowd? This Champion sweatshirt with a bold print is your answer! The soft inside and embroidered “C” logo on the left sleeve brings the sweatshirt to a whole new quality level, recognized worldwide thanks to the popular Champion brand.,• 82% cotton, 18% polyester,• Fabric weight: 12 oz/yd² (406.87 g/m²),• 1×1 ribbed knit cuffs and bottom band,• 1×1 rib inserts at underarm and sides for extra mobility,• Embroidered “C” logo on the left sleeve,• Blank product sourced from Honduras,",
+          "price": 38.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv03-premium-jumper"
+        }
+      },
+
+      {
+        "pk": 4,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv04",
+          "name": "NV Kids Jumper",
+          "description": "Cozy and cool, this youth crewneck sweatshirt is designed for every adventure. Made from soft fleece fabric, it’s easy to wear and hassle-free to wash. Whether headed out or snuggled up on the couch, the younger crowd will love the look and feel of this sweatshirt.,• 50% cotton, 50% polyester,• Fabric weight: 8 oz/yd² (271.25 g/m²),• Air-jetted fleece fabric,• Regular fit,• Double-needle stitching on shoulders, armholes, neck, waistband, and cuffs,• The fabric is OEKO-TEX Standard 100 certifie",
+          "price": 32.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv04-kids-jumper"
+        }
+      },
+
+      {
+        "pk": 5,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv05",
+          "name": "NV Mask T-shirt",
+          "description": "This t-shirt is comfortable, soft, lightweight, and form-fitting. It's an ideal staple piece for any wardrobe!,• 100% combed ring-spun cotton,• Heather Grey is 90% cotton, 10% polyester,• Fabric weight: 4.3 oz/yd² (145.8 g/m²),• 32 singles,• Pre-shrunk,• Blank product sourced from Honduras, Nicaragua, Mexico, or Cambodia",
+          "price": 28.00,
+          "category": 2,
+          "rating": 5,
+          "image": "media/nv05-mask-shirt"
+        }
+      },
+
+      {
+        "pk": 6,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv06",
+          "name": "NV Text Shirt",
+          "description": "This t-shirt is comfortable, soft, lightweight, and form-fitting. It's an ideal staple piece for any wardrobe!,• 100% combed ring-spun cotton,• Heather Grey is 90% cotton, 10% polyester,• Fabric weight: 4.3 oz/yd² (145.8 g/m²),• 32 singles,• Pre-shrunk,• Blank product sourced from Honduras, Nicaragua, Mexico, or Cambodia",
+          "price": 28.00,
+          "category": 2,
+          "rating": 5,
+          "image": "media/nv06-text-shirt"
+        }
+      },
+
+      {
+        "pk": 7,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv07",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      },
+
+      {
+        "pk": 8,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv08",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      },
+
+      {
+        "pk": 9,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv09",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      },
+
+      {
+        "pk": 10,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv10",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      },
+
+      {
+        "pk": 11,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv11",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      },
+
+      {
+        "pk": 12,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv12",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      },
+
+      {
+        "pk": 13,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv13",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      },
+
+      {
+        "pk": 14,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv14",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      },
+
+      {
+        "pk": 15,
+        "model": "products.product",
+        "fields": {
+          "sku": "nv15",
+          "name": "NV Mask Hoodie",
+          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
+          "price": 36.00,
+          "category": 1,
+          "rating": 5,
+          "image": "media/nv01-mask-hoodie"
+        }
+      }
+  ]
