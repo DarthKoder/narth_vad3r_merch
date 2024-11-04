@@ -88,12 +88,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv07",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Longsleeve T-shirt",
+          "description": "Update your wardrobe with this staple men's Champion long sleeve shirt. The soft cotton fabric and relaxed fit allow to wear the shirt on its own, or layer it with your favorite jacket. Plus, it has the added bonus of a Champion “C” logo on the left sleeve.,• 100% cotton,• Fabric weight: 5.2 oz/y² (176.3 g/m²),• Regular fit,• Taped crew neck,• Double-needle stitched bottom hem,• Ribbed knit cuffs,• Champion logo on the left sleeve,• Blank product sourced from El Salvador or Honduras",
+          "price": 32.00,
+          "category": 2,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv07-longsleeve-t-shirt"
         }
       },
 
@@ -102,12 +102,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv08",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Mask Bomber Jacket",
+          "description": "You can never go wrong with a classic bomber jacket, especially when it’s high quality and made of recycled materials. This versatile bomber jacket will complement most outfits and styles, and keep you warm during the chillier days.,• 100% recycled polyester,• Fabric weight: 5.5 oz/yd² (156 g/m²),• Relaxed fit,• Unisex sizing,• Utility pocket on the sleeve,• Rib-knit banding at collar, cuffs, and hem,• Premium YKK zipper,• Blank product sourced from China",
+          "price": 46.00,
+          "category": 3,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv08-mask-bomber"
         }
       },
 
@@ -116,12 +116,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv09",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Mask Snapback Hat",
+          "description": "This hat is structured with a classic fit, flat brim, and full buckram. The adjustable snap closure makes it a comfortable, one-size-fits-most hat.,• 80% acrylic, 20% wool,• Green Camo is 60% cotton, 40% polyester,• Structured, 6-panel, high-profile,• 6 embroidered eyelets,• Plastic snap closure,• Green undervisor,• Head circumference: 21⅝″–23⅝″ (54.9 cm–60 cm),• Blank product sourced from Vietnam or Bangladesh",
+          "price": 25.00,
+          "category": 4,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv09-mask-hat"
         }
       },
 
@@ -130,12 +130,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv10",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Text Snapback Hat",
+          "description": "This hat is structured with a classic fit, flat brim, and full buckram. The adjustable snap closure makes it a comfortable, one-size-fits-most hat.,• 80% acrylic, 20% wool,• Green Camo is 60% cotton, 40% polyester,• Structured, 6-panel, high-profile,• 6 embroidered eyelets,• Plastic snap closure,• Green undervisor,• Head circumference: 21⅝″–23⅝″ (54.9 cm–60 cm),• Blank product sourced from Vietnam or Bangladesh",
+          "price": 25.00,
+          "category": 4,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv10-hat-text"
         }
       },
 
@@ -144,12 +144,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv11",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Sherpa Blanket",
+          "description": "There’s something special about having that one blanket you know will bring you comfort no matter when and where. It’s time to take a new one home—the embroidered premium sherpa blanket has sheeny fleece fabric on one side and super-soft sherpa fabric on the other that’ll keep you warm and snug. The blanket’s plush look makes it a great home accessory as well as the perfect travel buddy.,• 100% polyester fleece on one side,• 100% polyester sherpa on the other side,• 50″ × 60″ (127.0 cm × 152.4 cm),• Blank product sourced from Thailand,",
+          "price": 42.00,
+          "category": 5,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv11-sherpa-blanket"
         }
       },
 
@@ -158,12 +158,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv12",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Text Towel",
+          "description": "Give your bathroom a vibrant look and wrap yourself up with this super soft and cozy all-over sublimation towel.,• Fabric composition in the US: 52% cotton, 48% polyester,• Fabric composition in EU: 50% cotton, 50% polyester,• Fabric weight in the US: 10.6 oz./yd.² (360 g/m²),• Fabric weight in EU: 11.8 oz./yd.² (400 g/m²),• Size: 30″ × 60″ × 0.28″ (76 × 152 × 0.7 cm),• Printed on one side only,• The non-printed side is made of terry fabric, making the towel more water-absorbent,• Blank product sourced from China",
+          "price": 26.00,
+          "category": 5,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv12-text-towel"
         }
       },
 
@@ -172,12 +172,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv13",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Mask Towel",
+          "description": "Give your bathroom a vibrant look and wrap yourself up with this super soft and cozy all-over sublimation towel.,• Fabric composition in the US: 52% cotton, 48% polyester,• Fabric composition in EU: 50% cotton, 50% polyester,• Fabric weight in the US: 10.6 oz./yd.² (360 g/m²),• Fabric weight in EU: 11.8 oz./yd.² (400 g/m²),• Size: 30″ × 60″ × 0.28″ (76 × 152 × 0.7 cm),• Printed on one side only,• The non-printed side is made of terry fabric, making the towel more water-absorbent,• Blank product sourced from China",
+          "price": 26.00,
+          "category": 5,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv13-mask-towel"
         }
       },
 
@@ -186,12 +186,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv14",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Mask Patch",
+          "description": "Spice up your outfit by adding an eye-catching embroidered patch. Thanks to its durable twill fabric, the patch is resilient to heat. Order it today and get ready to start embellishing!,• 26% cotton, 74% polyester,• 3″ (7.6 cm) in diameter,• Attachment options: iron-on, sew-on, or safety pin,• Blank product sourced from China",
+          "price": 12.50,
+          "category": 6,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv14-mask-hoodie"
         }
       },
 
@@ -200,12 +200,12 @@
         "model": "products.product",
         "fields": {
           "sku": "nv15",
-          "name": "NV Mask Hoodie",
-          "description": "Everyone needs a cozy go-to hoodie to curl up in, so go for one that's soft, smooth, and stylish. It's the perfect choice for cooler evenings!,• 50% pre-shrunk cotton, 50% polyester,• Fabric weight: 8.0 oz/yd² (271.25 g/m²),• Air-jet spun yarn with a soft feel and reduced pilling,• Double-lined hood with matching drawcord,• Quarter-turned body to avoid crease down the middle,• 1 × 1 athletic rib-knit cuffs and waistband with spandex,• Front pouch pocket,• Double-needle stitched collar, shoulders, armholes,cuffs,  and hem,• Blank product sourced from Bangladesh, Nicaragua, Honduras or El Salvador",
-          "price": 36.00,
-          "category": 1,
+          "name": "NV Mask Notebook",
+          "description": "Whether crafting a masterpiece or brainstorming the next big idea, this notebook will inspire your inner wordsmith. The product features 80 lined, cream-colored pages, a built-in elastic closure, and a matching ribbon page marker. Plus, the expandable inner pocket is perfect for storing loose notes and business cards, so you’ll never lose track of important information.,• Cover material: UltraHyde hardcover paper,• Size: 5.5in × 8.5in (13.97 cm × 21.59 cm),• Weight: 10.9 oz (309 g),• 80 pages of lined, cream-colored paper,• Matching elastic closure and ribbon marker,• Expandable inner pocket",
+          "price": 18.00,
+          "category": 6,
           "rating": 5,
-          "image": "media/nv01-mask-hoodie"
+          "image": "media/nv15-mask-notebook"
         }
       }
   ]
