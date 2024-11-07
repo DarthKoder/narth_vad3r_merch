@@ -28,7 +28,7 @@ SECRET_KEY = 'p@ei#69*b*zz3u4yie-$()@cy^l(+x9&@6ypx+r0lm(3%_9hr7'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".codeinstitute-ide.net", "localhost"]
+ALLOWED_HOSTS = [".codeinstitute-ide.net", "127.0.0.1","localhost"]
 
 
 # Application definition
