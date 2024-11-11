@@ -9,7 +9,7 @@
         "price": 46.00,
         "category": 1,
         "rating": 5,
-        "image": "media/nv01-mask-hoodie"
+        "image": "/workspace/narth_vad3r_merch/media/nv01-mask-hoodie.png"
       }
     },
 
@@ -23,7 +23,7 @@
           "price": 46.00,
           "category": 1,
           "rating": 5,
-          "image": "media/nv02-text-hoodie"
+          "image": "/workspace/narth_vad3r_merch/media/nv02-text-hoodie.png"
         }
       },
 
@@ -37,7 +37,7 @@
           "price": 38.00,
           "category": 1,
           "rating": 5,
-          "image": "media/nv03-premium-jumper"
+          "image": "/workspace/narth_vad3r_merch/media/nv03-premium-jumper.png"
         }
       },
 
@@ -51,7 +51,7 @@
           "price": 32.00,
           "category": 1,
           "rating": 5,
-          "image": "media/nv04-kids-jumper"
+          "image": "/workspace/narth_vad3r_merch/media/nv04-text-jumper.png"
         }
       },
 
@@ -65,7 +65,7 @@
           "price": 28.00,
           "category": 2,
           "rating": 5,
-          "image": "media/nv05-mask-shirt"
+          "image": "/workspace/narth_vad3r_merch/media/nv05-mask-shirt.png"
         }
       },
 
@@ -79,7 +79,7 @@
           "price": 28.00,
           "category": 2,
           "rating": 5,
-          "image": "media/nv06-text-shirt"
+          "image": "/workspace/narth_vad3r_merch/media/nv06-text-shirt.png"
         }
       },
 
@@ -93,7 +93,7 @@
           "price": 32.00,
           "category": 2,
           "rating": 5,
-          "image": "media/nv07-longsleeve-t-shirt"
+          "image": "/workspace/narth_vad3r_merch/media/nv07-longsleeve-shirt.png"
         }
       },
 
@@ -107,7 +107,7 @@
           "price": 46.00,
           "category": 3,
           "rating": 5,
-          "image": "media/nv08-mask-bomber"
+          "image": "/workspace/narth_vad3r_merch/media/nv08-mask-bomber.png"
         }
       },
 
@@ -121,7 +121,7 @@
           "price": 25.00,
           "category": 4,
           "rating": 5,
-          "image": "media/nv09-mask-hat"
+          "image": "/workspace/narth_vad3r_merch/media/nv09-hat-mask.png"
         }
       },
 
@@ -135,7 +135,7 @@
           "price": 25.00,
           "category": 4,
           "rating": 5,
-          "image": "media/nv10-hat-text"
+          "image": "/workspace/narth_vad3r_merch/media/nv10-hat-logo.png"
         }
       },
 
@@ -149,7 +149,7 @@
           "price": 42.00,
           "category": 5,
           "rating": 5,
-          "image": "media/nv11-sherpa-blanket"
+          "image": "/workspace/narth_vad3r_merch/media/nv11-blanket.png"
         }
       },
 
@@ -163,7 +163,7 @@
           "price": 26.00,
           "category": 5,
           "rating": 5,
-          "image": "media/nv12-text-towel"
+          "image": "/workspace/narth_vad3r_merch/media/nv12-text-towel.png"
         }
       },
 
@@ -177,7 +177,7 @@
           "price": 26.00,
           "category": 5,
           "rating": 5,
-          "image": "media/nv13-mask-towel"
+          "image": "/workspace/narth_vad3r_merch/media/nv13-mask-towel.png"
         }
       },
 
@@ -191,7 +191,7 @@
           "price": 12.50,
           "category": 6,
           "rating": 5,
-          "image": "media/nv14-mask-hoodie"
+          "image": "/workspace/narth_vad3r_merch/media/nv14-mask-patch.png"
         }
       },
 
@@ -205,7 +205,7 @@
           "price": 18.00,
           "category": 6,
           "rating": 5,
-          "image": "media/nv15-mask-notebook"
+          "image": "/workspace/narth_vad3r_merch/media/nv15-mask-notebook.png"
         }
       }
   ]
