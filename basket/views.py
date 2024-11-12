@@ -7,12 +7,12 @@ from .contexts import basket_contents
 # Create your views here.
 
 def view_basket(request):
-    """ A view that renders the bag contents page """
+    """ A view that renders the basket contents page """
     
     return render(request, 'basket/basket.html')
 
 def add_to_basket(request, item_id):
-    """ Add a quantity of the specified product to the shopping bag """
+    """ Add a quantity of the specified product to the shopping basket """
     
     product = get_object_or_404(Product, pk=item_id)
     quantity = int(request.POST.get('quantity'))
