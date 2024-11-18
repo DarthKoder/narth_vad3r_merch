@@ -30,6 +30,13 @@ body {
     width: fit-content;
 }
 
+/* Ensures the header logo is centered at all times */
+.main-logo-link h2 {
+    margin: 0;
+    padding: 0;
+}
+
+
 .shop-now-button {
     background: black;
     color: white;
@@ -265,3 +272,5 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 }
+
+

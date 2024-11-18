@@ -19,7 +19,7 @@
                         <a href="{{ product.image.url }}" target="_blank">
                             <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
-                        {% else %}
+                    {% else %}
                         <a href="">
                             <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
                         </a>
@@ -101,6 +101,33 @@
                         </div>
                     </form>
                 </div>
+            </div>
+        </div>
+
+        <!-- Review Section -->
+        <div class="row">
+            <div class="col-12 col-md-8 offset-md-2 mt-5">
+                <h3>Reviews</h3>
+                {% for review in reviews %}
+                    <div class="review border p-3 mb-3">
+                        <strong>{{ review.user.username }}</strong> - {{ review.rating }} Stars<br>
+                        <p>{{ review.comment }}</p>
+                        <small>{{ review.created_at|date:"M d, Y" }}</small>
+                    </div>
+                {% empty %}
+                    <p>No reviews yet.</p>
+                {% endfor %}
+
+                {% if user.is_authenticated %}
+                    <h4>Leave a Review</h4>
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button type="submit" class="btn btn-primary">Submit Review</button>
+                    </form>
+                {% else %}
+                    <p><a href="{% url 'account_login' %}">Log in</a> to leave a review.</p>
+                {% endif %}
             </div>
         </div>
     </div>
