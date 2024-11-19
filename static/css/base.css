@@ -7,10 +7,21 @@ body {
     background-size: cover;
     color: #ffffff;
     font-family: 'Lato';
-    margin: 0; /* Ensure no extra margin */
-    padding-top: 164px; /* Offset to account for navbar/header height */
-    height: auto; /* Allow full content height */
-    overflow-x: hidden; /* Prevent horizontal scrollbars */
+    margin: 10;
+    padding-top: 164px;
+    overflow-x: hidden; 
+}
+
+header {
+    z-index: 1050;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background-color: #000;
+}
+
+.fixed-top {
+    z-index: 1051;
 }
 /*-------- Index Theme --------*/
 
@@ -25,10 +36,10 @@ body {
 .text-black-red {
     color: #ff0000;
     text-shadow: 
-        1px 1px 0 #fff, /* Top-left */
-        -1px -1px 0 #fff, /* Bottom-right */
-        1px -1px 0 #fff, /* Top-right */
-        -1px 1px 0 #fff; /* Bottom-left */
+        1px 1px 0 #fff,
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff;
     font-family: "Orbitron", sans-serif;
 }
 
@@ -213,17 +224,6 @@ input[name='q']::placeholder {
     height: 2px;
 }
 
-/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
-.arrow-up {
-    width: 0; 
-    height: 0; 
-    border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
-    border-bottom: 10px solid black;
-    position: absolute;
-    top: -10px;
-    right: 36px;
-}
 
 /* Convenience classes - colors copied from Bootstrap */
 .arrow-primary {
