@@ -7,7 +7,7 @@ body {
     background-size: cover;
     color: #ffffff;
     font-family: 'Lato';
-    margin: 10;
+    margin: 10px;
     padding-top: 164px;
     overflow-x: hidden; 
 }
@@ -56,6 +56,148 @@ header {
     border: 2px solid #ff0000;
 }
 
+/* ------ Main ------*/
+
+body {
+    background-color: #111; 
+    color: #fff; 
+    
+}
+
+a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #ff0000; 
+    text-shadow: 0 0 10px #ff0000; 
+}
+
+/* Header Styling */
+header {
+    border-bottom: 2px solid #ff0000;
+    z-index: 1000;
+}
+
+#topnav {
+    background-color: #111;
+    border-bottom: 1px solid #ff0000;
+}
+
+#topnav {
+    color: #ff0000; 
+    text-transform: uppercase;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#topnav .nav-link:hover {
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+.nv-logo-text {
+    color: #ff0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #fff;
+    margin: auto;
+}
+
+.nv-logo-text:hover {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+i.fa {
+    font-size: 1.5em; /* Adjust icon size */
+}
+
+
+/* Basket Styling */
+.text-info {
+    color: #00ff00 !important;
+}
+
+/* Search Bar Styling */
+input.form-control {
+    background-color: #111;
+    border: 1px solid #ff0000;
+    color: #fff;
+}
+
+button.btn-red {
+    background-color: #ff0000;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-red:hover {
+    background-color: #d40000;
+}
+
+/* Main Navigation */
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff0000;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #ff0000;
+}
+
+.navbar-toggler {
+    background-color: #ff0000;
+    font-size: 2rem;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+/* Hover effect for the navbar-toggler */
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+#delivery-banner, h4 {
+    background-color: #111;
+    color: #888181;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Toast Messages */
+.message-container .toast {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #ff0000;
+}
+
+.message-container .toast .toast-header {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+/* Footer (Optional) */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #ff0000; /* Red top border */
+}
+
 
 
 html {
@@ -85,11 +227,76 @@ html {
 
 /* Ensures the header logo is centered at all times */
 .main-logo-link h2 {
+    border: 1px solid #ff0000;
+    border-radius: 0; 
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5); 
     margin: 0;
     padding: 0;
 }
 
 /*------- Nav Bar -------*/
+
+#main-nav {
+    background-color: #000;
+}
+
+.navbar-nav .nav-link {
+    color: #ff0000; 
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff; 
+    text-shadow: 0 0 8px #ff0000; 
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    background-color: #111;
+    border: 1px solid #ff0000;
+    border-radius: 0; 
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5); 
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ff0000;
+    color: #fff;
+    text-shadow: none;
+}
+
+/* Active Link Styling */
+.navbar-nav .nav-item.active .nav-link {
+    color: #fff;
+    background-color: #ff0000;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+/* Adjust margins for spacing */
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .dropdown-menu {
+    margin-top: 0.5rem;
+}
+
+/* Optional: Add glow effect to dropdown */
+.navbar-nav .dropdown-menu:hover {
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.75);
+}
 
 
 /* -------- Products -------- */
@@ -210,6 +417,7 @@ input[name='q']::placeholder {
 /* ------- toasts ------ */
 
 .message-container {
+    color: #000;
     position: fixed;
     top: 72px;
     right: 15px;
@@ -352,6 +560,13 @@ input[name='q']::placeholder {
 
     body {
         height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-toggler {
+        font-size: 1.5rem; /* Slightly smaller font on smaller screens */
+        padding: 0.4rem; /* Adjust padding for smaller screens */
     }
 }
 
