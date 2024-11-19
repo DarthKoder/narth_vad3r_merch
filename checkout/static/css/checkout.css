@@ -1,3 +1,120 @@
+/* General Black, Red, and White Theme */
+body {
+  background-color: #000; 
+  color: #fff; 
+}
+
+.header-container {
+  color: #ff0000; 
+}
+
+hr {
+  border-color: #ff0000;
+}
+
+h2.logo-font {
+  color: #ff0000;
+}
+
+/* Order Summary */
+.text-muted {
+  color: #ccc !important;
+}
+
+.text-black {
+  color: #fff;
+}
+
+.text-right {
+  color: #fff;
+}
+
+.order-summary .text-right strong {
+  color: #ff0000;
+}
+
+/* Buttons */
+.btn-outline-black {
+  color: #ff0000; 
+  border-color: #ff0000;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-black:hover {
+  background-color: #ff0000;
+  color: #000;
+}
+
+.btn-black {
+  color: #fff;
+  background-color: #ff0000; 
+  border: 2px solid #ff0000;
+  transition: all 0.3s ease;
+}
+
+.btn-black:hover {
+  background-color: #000;
+  color: #ff0000;
+}
+
+/* Form Elements */
+fieldset {
+  border: 2px solid #ff0000; 
+  color: #fff;
+}
+
+.legend-label {
+  color: #ff0000; 
+}
+
+/* Card Element */
+#card-element {
+  background-color: #fff;
+  color: #000;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+#card-errors {
+  color: #ff0000;
+}
+
+/* Overlay */
+#loading-overlay {
+  background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.loading-spinner {
+  color: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+}
+
+/* Icons */
+.icon i {
+  color: #ff0000; 
+}
+
+/* Links */
+a.text-info {
+  color: #ff0000 !important;
+}
+
+a.text-info:hover {
+  text-decoration: underline;
+}
+
+/* Table Borders */
+.table-bordered td, .table-bordered th {
+  border: 1px solid #ff0000;
+}
+
+/* -------- Stripe -------- */
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -6,7 +123,7 @@
   border: 1px solid transparent;
   border-radius: 0px;
   background-color: white;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
+  box-shadow: 0 1px 3px 0 #ff0000;
   -webkit-transition: box-shadow 150ms ease;
   transition: box-shadow 150ms ease;
 }
@@ -53,14 +170,6 @@ select option[value=""] {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(23, 162, 184, .85);
+  background: rgba(184, 23, 23, 0.85);
   z-index: 9999;
-}
-
-.loading-spinner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  height: 100%;
 }

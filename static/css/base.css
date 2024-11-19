@@ -1,17 +1,59 @@
-.nv-logo-text {
-    
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Orbitron:wght@400..900&family=Teko:wght@300..700&display=swap');
+
+/*-------- Misc --------*/
+body {
+    background: url('/media/red-lightning.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Lato';
+    margin: 0; /* Ensure no extra margin */
+    padding-top: 164px; /* Offset to account for navbar/header height */
+    height: auto; /* Allow full content height */
+    overflow-x: hidden; /* Prevent horizontal scrollbars */
 }
+/*-------- Index Theme --------*/
+
+/* Centering and Black-Red Theme */
+.container.h-100 {
+    position: relative;
+    min-height: 100vh;
+    color: #fff;
+    background-color: #00000000;
+}
+
+.text-black-red {
+    color: #ff0000;
+    text-shadow: 
+        1px 1px 0 #fff, /* Top-left */
+        -1px -1px 0 #fff, /* Bottom-right */
+        1px -1px 0 #fff, /* Top-right */
+        -1px 1px 0 #fff; /* Bottom-left */
+    font-family: "Orbitron", sans-serif;
+}
+
+.shop-now-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: 2px solid #ff0000;
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-now-button:hover {
+    background-color: #fff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+
+
 html {
+    height: 100%;
+    overflow-x: hidden;
+    color: #dc3545;
     height: 100%;
 }
 
-body {
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
-    background-size: cover;
-    height: calc(100vh - 164px);
-    color: #555;
-    font-family: 'Lato';
-}
 
 /* from Bulma */
 .icon {
@@ -36,62 +78,100 @@ body {
     padding: 0;
 }
 
+/*------- Nav Bar -------*/
 
-.shop-now-button {
-    background: black;
-    color: white;
-    min-width: 260px;
+
+/* -------- Products -------- */
+
+h2.logo-font {
+    color: #ff0000;
 }
 
-.btn-black {
-    background: black;
-    color: white;
+.text-muted {
+    color: #ccc !important;
 }
 
-.btn-outline-black {
-    background: white;
-    color: black !important; /* use important to override link colors for <a> elements */
-    border: 1px solid black;
+a.text-muted {
+    color: #ff0000 !important;
 }
 
-.btn-outline-black:hover,
-.btn-outline-black:active,
-.btn-outline-black:focus {
-    background: black;
-    color: white !important;
+a.text-muted:hover {
+    text-decoration: underline;
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
-    background: #222;
-    color: white;
+/* Category Badges */
+.category-badge .badge-white {
+    color: #000;
+    background-color: #fff;
+    border-color: #ff0000;
+    transition: all 0.3s ease;
 }
 
-.text-black {
-    color: #000 !important;
+.category-badge .badge-white:hover {
+    color: #fff;
+    background-color: #ff0000;
 }
 
-.border-black {
-    border: 1px solid black !important;
+/* Cards */
+.card {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #ff0000;
+    transition: all 0.3s ease;
 }
 
-.bg-black {
-    background: #000 !important;
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
 }
 
-.overlay {
-	height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	position: fixed;
-	background: white;
-	z-index: -1;
+.card-img-top {
+    border-bottom: 2px solid #ff0000;
 }
+
+/* Prices and Ratings */
+.card-footer .lead {
+    color: #ff0000;
+}
+
+.card-footer small {
+    color: #ccc;
+}
+
+/* Sort Selector */
+.sort-select-wrapper .custom-select {
+    background-color: #111; 
+    color: #fff; 
+    border: 2px solid #ff0000;
+    transition: all 0.3s ease;
+}
+
+.sort-select-wrapper .custom-select:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btt-button {
+    background-color: #ff0000; 
+    border: 2px solid #fff; 
+    color: #000; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.btt-button:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+
 
 a.category-badge > span.badge:hover {
     background: #212529 !important;
@@ -116,7 +196,7 @@ input[name='q']::placeholder {
     color: #aab7c4;
 }
 
-/* ------------------------------- bootstrap toasts */
+/* ------- toasts ------ */
 
 .message-container {
     position: fixed;
@@ -184,16 +264,9 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
-/* -------------------------------- Media Queries */
 
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-}
 
-/* Allauth form formatting */
+/* ------ Allauth form formatting ------ */
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
@@ -246,6 +319,15 @@ input[name='q']::placeholder {
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+/* --------- Media Queries ---------*/
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
