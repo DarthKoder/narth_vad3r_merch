@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from products import views
 
 
 
@@ -28,5 +29,7 @@ urlpatterns = [
     path('basket/', include('basket.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
+    path('review/edit/<int:review_id>/', views.edit_review, name='edit_review'),
+    path('review/delete/<int:review_id>/', views.delete_review, name='delete_review'),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

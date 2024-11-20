@@ -46,6 +46,7 @@ class Review(models.Model):
     rating = models.PositiveSmallIntegerField(choices=[(i, i) for i in range(1, 6)])
     comment = models.TextField(max_length=1000)
     created_at = models.DateTimeField(default=timezone.now)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return f"Review by {self.user} on {self.product.name} - {self.rating} Stars"
