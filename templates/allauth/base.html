@@ -1,40 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>{% block head_title %}{% endblock %}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}NARTH VAD3R MERCH{% endblock %}</title>
+    
+    <!-- Add your extra head block for additional styles or scripts -->
     {% block extra_head %}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      body {
+        background-color: black;
+        color: white;
+      }
+      .text-red {
+        color: #ff0000; /* Red theme color */
+      }
+      .nav-link {
+        color: white !important;
+      }
+      .nav-link:hover {
+        color: #ff0000 !important;
+      }
+      .navbar {
+        background-color: black;
+      }
+      .messages-container {
+        background-color: #333;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .menu-container {
+        margin-top: 20px;
+        background-color: #222;
+        padding: 15px;
+        border-radius: 5px;
+      }
+    </style>
     {% endblock %}
   </head>
+  
   <body>
     {% block body %}
-
+    
     {% if messages %}
-    <div>
+    <div class="messages-container mb-4">
       <strong>Messages:</strong>
       <ul>
         {% for message in messages %}
-        <li>{{message}}</li>
+        <li>{{ message }}</li>
         {% endfor %}
       </ul>
     </div>
     {% endif %}
 
-    <div>
+    <div class="container menu-container">
       <strong>Menu:</strong>
       <ul>
         {% if user.is_authenticated %}
-        <li><a href="{% url 'account_email' %}">Change E-mail</a></li>
-        <li><a href="{% url 'account_logout' %}">Sign Out</a></li>
+        <li><a href="{% url 'account_email' %}" class="text-red">Change E-mail</a></li>
+        <li><a href="{% url 'account_logout' %}" class="text-red">Sign Out</a></li>
         {% else %}
-        <li><a href="{% url 'account_login' %}">Sign In</a></li>
-        <li><a href="{% url 'account_signup' %}">Sign Up</a></li>
+        <li><a href="{% url 'account_login' %}" class="text-red">Sign In</a></li>
+        <li><a href="{% url 'account_signup' %}" class="text-red">Sign Up</a></li>
         {% endif %}
       </ul>
     </div>
-    {% block content %}
+
+    <div class="container mt-5">
+      {% block content %}
+      <!-- This section will be filled with the content of the page -->
+      {% endblock %}
+    </div>
+
     {% endblock %}
-    {% endblock %}
+    
+    <!-- Add your extra body content like scripts -->
     {% block extra_body %}
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     {% endblock %}
+
   </body>
 </html>

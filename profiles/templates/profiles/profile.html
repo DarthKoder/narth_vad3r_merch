@@ -8,20 +8,52 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col">
+                <h1 class="text-center text-red">My Profile</h1>
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
-            <div class="col">
-                <hr>
-                <h2 class="logo-font mb-4">My Profile</h2>
-                <hr>
+            <!-- Profile Info Section -->
+            <div class="col-12 col-md-6">
+                <div class="profile-info">
+                    <h3 class="text-red">Profile Information</h3>
+                    <hr>
+                    <p><strong>Username:</strong> {{ user.username }}</p>
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                    <p><strong>Full Name:</strong> {{ profile.first_name }} {{ profile.last_name }}</p>
+                    <p><strong>Joined on:</strong> {{ user.date_joined|date:"F d, Y" }}</p>
+                </div>
+            </div>
+
+            <!-- Recent Orders Section -->
+            <div class="col-12 col-md-6">
+                <div class="recent-orders">
+                    <h3 class="text-red">Recent Orders</h3>
+                    <hr>
+                    {% if orders %}
+                        <ul class="list-unstyled">
+                            {% for order in orders %}
+                                <li class="order-item">
+                                    <a href="{% url 'order_detail' order.id %}" class="text-white">
+                                        <p><strong>Order #{{ order.id }}</strong> - Placed on: {{ order.date_ordered|date:"F d, Y" }}</p>
+                                        <p>Total: £{{ order.total|floatformat:2 }}</p>
+                                        <p>Status: <span class="badge badge-{{ order.get_status_class }}">{{ order.status }}</span></p>
+                                    </a>
+                                    <hr>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    {% else %}
+                        <p>You have no recent orders.</p>
+                    {% endif %}
+                </div>
             </div>
         </div>
-        {{ profile }}
+    </div>
 {% endblock %}

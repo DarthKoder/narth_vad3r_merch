@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_list_or_404
+from allauth.account.views import ConfirmEmailView
 
 from .models import UserProfile
 
@@ -13,3 +14,7 @@ def profile(request):
     }
 
     return render(request, template, context)
+
+class CustomConfirmEmailView(ConfirmEmailView):
+    template_name = 'email.html'
+    pass

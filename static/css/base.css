@@ -121,7 +121,6 @@ i.fa {
 }
 
 
-/* Basket Styling */
 .text-info {
     color: #00ff00 !important;
 }
@@ -253,7 +252,7 @@ html {
     text-shadow: 0 0 8px #ff0000; 
 }
 
-/* Dropdown Menu */
+
 .dropdown-menu {
     background-color: #111;
     border: 1px solid #ff0000;
@@ -276,7 +275,6 @@ html {
     text-shadow: none;
 }
 
-/* Active Link Styling */
 .navbar-nav .nav-item.active .nav-link {
     color: #fff;
     background-color: #ff0000;
@@ -284,7 +282,6 @@ html {
     padding: 5px 10px;
 }
 
-/* Adjust margins for spacing */
 .navbar-nav .nav-item {
     margin-right: 15px;
 }
@@ -293,7 +290,6 @@ html {
     margin-top: 0.5rem;
 }
 
-/* Optional: Add glow effect to dropdown */
 .navbar-nav .dropdown-menu:hover {
     box-shadow: 0 6px 12px rgba(255, 0, 0, 0.75);
 }
@@ -317,44 +313,47 @@ a.text-muted:hover {
     text-decoration: underline;
 }
 
-/* Category Badges */
-.category-badge .badge-white {
-    color: #000;
-    background-color: #fff;
-    border-color: #ff0000;
-    transition: all 0.3s ease;
-}
-
-.category-badge .badge-white:hover {
-    color: #fff;
-    background-color: #ff0000;
-}
-
-/* Cards */
 .card {
-    background-color: #111;
-    color: #fff;
     border: 1px solid #ff0000;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 .card:hover {
-    transform: scale(1.02);
-    box-shadow: 0 4px 15px rgba(255, 0, 0, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.7);
 }
 
-.card-img-top {
+.product-image {
     border-bottom: 2px solid #ff0000;
 }
 
-/* Prices and Ratings */
-.card-footer .lead {
+.custom-select {
+    background-color: #000;
+    color: #fff;
+}
+
+.btt-button {
+    background-color: #000;
+    bottom: 20px;
+    right: 20px;
+}
+.btt-button .btt-link {
     color: #ff0000;
 }
 
-.card-footer small {
-    color: #ccc;
+.badge-dark {
+    background-color: #000;
+    color: #ff0000;
 }
+
+.text-red {
+    color: #ff0000 !important;
+}
+.border-red {
+    border-color: #ff0000 !important;
+}
+
+
+
 
 /* Sort Selector */
 .sort-select-wrapper .custom-select {
