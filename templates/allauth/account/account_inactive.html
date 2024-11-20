@@ -4,10 +4,27 @@
 
 {% block head_title %}{% trans "Account Inactive" %}{% endblock %}
 
-{% block inner_content %}
-<hr>
-<h2 class="logo-font mb-4">{% trans "Account Inactive" %}</h2>
-<hr>
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
 
-<p>{% trans "This account is inactive." %}</p>
+{% block inner_content %}
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 text-center">
+                <div class="alert alert-danger">
+                    <h2 class="logo-font mb-4 text-red">
+                        {% trans "Account Inactive" %}
+                    </h2>
+                    <p class="text-white">{% trans "This account is inactive." %}</p>
+                    <p class="text-white">
+                        {% trans "Please contact support or check your email for more information." %}
+                    </p>
+                    <a href="{% url 'account_login' %}" class="btn btn-red mt-3">
+                        {% trans "Go to Login" %}
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

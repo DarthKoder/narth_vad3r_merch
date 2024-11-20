@@ -17,7 +17,7 @@
             <h2 class="logo-font text-red">Products</h2>
             {% for c in current_categories %}
                 <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
-                    <span class="p-2 mt-2 badge badge-dark text-red rounded-0 border border-red">
+                    <span class="p-3 mt-3 badge badge-dark text-white rounded-0 border border-danger" style="font-size: 1.25rem;">
                         {{ c.friendly_name }}
                     </span>
                 </a>
