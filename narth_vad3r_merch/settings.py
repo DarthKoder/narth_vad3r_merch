@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import dj_database_url
 
 if os.path.isfile('env.py'):
     import env
@@ -18,7 +19,7 @@ if os.path.isfile('env.py'):
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-DEBUG = False
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [".codeinstitute-ide.net", "127.0.0.1","localhost", "narth-vad3r-merch.herokuapp.com"]
 
