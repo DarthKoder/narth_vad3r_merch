@@ -170,7 +170,6 @@ button.btn-red:hover {
 }
 
 #delivery-banner, h4 {
-    background-color: #111;
     color: #888181;
     font-weight: bold;
     font-size: 1rem;
@@ -685,5 +684,4 @@ footer {
         padding: 0.4rem; /* Adjust padding for smaller screens */
     }
 }
-
-
+}
