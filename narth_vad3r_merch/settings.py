@@ -21,7 +21,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = [".codeinstitute-ide.net", "127.0.0.1","localhost", "narth-vad3r-merch.herokuapp.com"]
+ALLOWED_HOSTS = [".codeinstitute-ide.net", "127.0.0.1", "localhost", "narth-vad3r-merch-92994612de68.herokuapp.com"]
+
 
 
 # Application definition
@@ -51,6 +52,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -60,6 +62,9 @@ MIDDLEWARE = [
     'allauth.account.middleware.AccountMiddleware',
 
 ]
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 ROOT_URLCONF = 'narth_vad3r_merch.urls'
 
