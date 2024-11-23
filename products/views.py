@@ -70,6 +70,7 @@ def product_detail(request, product_id):
             review.product = product
             review.user = request.user
             review.save()
+            messages.success(request, "Your review has been posted successfully!")
             return redirect('product_detail', product_id=product.id)
     else:
         form = ReviewForm()
@@ -92,10 +93,10 @@ def edit_review(request, review_id):
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
+            messages.success(request, "Your review has been updated successfully!")
             return redirect('product_detail', product_id=review.product.id)
     else:
         form = ReviewForm(instance=review)
-    
     return render(request, 'products/edit_review.html', {'form': form, 'review': review})
 
 
@@ -106,6 +107,7 @@ def delete_review(request, review_id):
     # Check if the user is the owner of the review
     if review.user != request.user:
         return redirect('product_detail', product_id=review.product.id)
-
+    
+    messages.success(request, "Your review has been deleted successfully!")
     review.delete()
     return redirect('product_detail', product_id=review.product.id)
