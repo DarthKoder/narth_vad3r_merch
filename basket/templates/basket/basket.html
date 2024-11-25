@@ -28,18 +28,20 @@
                         <table class="table table-sm table-borderless text-white">
                             <thead class="bg-danger">
                                 <tr>
-                                    <th scope="col" class="text-white">Product Info</th>
-                                    <th scope="col" class="text-white"></th>
-                                    <th scope="col" class="text-white">Price</th>
-                                    <th scope="col" class="text-white">Qty</th>
-                                    <th scope="col" class="text-white">Subtotal</th>
+                                    <th scope="col" class="text-white" aria-label="Product Information">Product Info</th>
+                                    <th scope="col" class="text-white" aria-label="Additional Details"></th>
+                                    <th scope="col" class="text-white" aria-label="Product Price">Price</th>
+                                    <th scope="col" class="text-white" aria-label="Quantity">Qty</th>
+                                    <th scope="col" class="text-white" aria-label="Subtotal">Subtotal</th>
                                 </tr>
                             </thead>
 
                             {% for item in basket_items %}
                                 <tr class="bg-dark text-white">
                                     <td class="p-3 w-25">
-                                        <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                                        <img class="img-fluid rounded" 
+                                             src="{{ item.product.image.url }}" 
+                                             alt="Image of {{ item.product.name }}">
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0"><strong>{{ item.product.name }}</strong></p>
@@ -56,19 +58,25 @@
                                                 <div class="input-group">
                                                     <div class="input-group-prepend">
                                                         <button class="decrement-qty btn btn-sm btn-outline-danger rounded-0" 
-                                                            data-item_id="{{ item.item_id }}" id="decrement-qty_{{ item.item_id }}">
+                                                            data-item_id="{{ item.item_id }}" 
+                                                            id="decrement-qty_{{ item.item_id }}" 
+                                                            aria-label="Decrease quantity for {{ item.product.name }}">
                                                             <span>
                                                                 <i class="fas fa-minus fa-sm"></i>
                                                             </span>
                                                         </button>
                                                     </div>
-                                                    <input class="form-control form-control-sm qty_input" type="number"
-                                                        name="quantity" value="{{ item.quantity }}" min="1" max="99"
-                                                        data-item_id="{{ item.item_id }}"
-                                                        id="id_qty_{{ item.item_id }}">
+                                                    <input class="form-control form-control-sm qty_input" 
+                                                           type="number" name="quantity" 
+                                                           value="{{ item.quantity }}" min="1" max="99" 
+                                                           data-item_id="{{ item.item_id }}" 
+                                                           id="id_qty_{{ item.item_id }}" 
+                                                           aria-label="Quantity input for {{ item.product.name }}">
                                                     <div class="input-group-append">
                                                         <button class="increment-qty btn btn-sm btn-outline-danger rounded-0"
-                                                            data-item_id="{{ item.item_id }}" id="increment-qty_{{ item.item_id }}">
+                                                            data-item_id="{{ item.item_id }}" 
+                                                            id="increment-qty_{{ item.item_id }}" 
+                                                            aria-label="Increase quantity for {{ item.product.name }}">
                                                             <span>
                                                                 <i class="fas fa-plus fa-sm"></i>
                                                             </span>
@@ -80,8 +88,13 @@
                                                 </div>
                                             </div>
                                         </form>
-                                        <a class="update-link text-danger"><small>Update</small></a>
-                                        <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}" data-product_size="{{ item.size }}"><small>Remove</small></a>
+                                        <a class="update-link text-danger" aria-label="Update quantity for {{ item.product.name }}"><small>Update</small></a>
+                                        <a class="remove-item text-danger float-right" 
+                                           id="remove_{{ item.item_id }}" 
+                                           data-product_size="{{ item.size }}" 
+                                           aria-label="Remove {{ item.product.name }} from basket">
+                                           <small>Remove</small>
+                                        </a>
                                     </td>
                                     <td class="py-3">
                                         <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
@@ -102,13 +115,13 @@
                             </tr>
                             <tr class="bg-dark text-white">
                                 <td colspan="5" class="text-right">
-                                    <a href="{% url 'products' %}" class="btn btn-outline-danger rounded-0 btn-lg">
+                                    <a href="{% url 'products' %}" class="btn btn-outline-danger rounded-0 btn-lg" aria-label="Continue shopping">
                                         <span class="icon">
                                             <i class="fas fa-chevron-left"></i>
                                         </span>
                                         <span class="text-uppercase">Keep Shopping</span>
                                     </a>
-                                    <a href="{% url 'checkout' %}" class="btn btn-danger rounded-0 btn-lg">
+                                    <a href="{% url 'checkout' %}" class="btn btn-danger rounded-0 btn-lg" aria-label="Proceed to secure checkout">
                                         <span class="text-uppercase">Secure Checkout</span>
                                         <span class="icon">
                                             <i class="fas fa-lock"></i>
@@ -120,7 +133,7 @@
                     </div>
                 {% else %}
                     <p class="lead mt-3 mb-5 text-white">Your basket is empty.</p>
-                    <a href="{% url 'products' %}" class="btn btn-outline-danger rounded-0 btn-lg">
+                    <a href="{% url 'products' %}" class="btn btn-outline-danger rounded-0 btn-lg" aria-label="Continue shopping with an empty basket">
                         <span class="icon">
                             <i class="fas fa-chevron-left"></i>
                         </span>
