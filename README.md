@@ -15,7 +15,7 @@ This website was created as the 4th Milestone Project for Code Institute's web a
 * [User Experience](#user-experience)
     * [Rationale](#rationale)
     * [Owner Goals](#owners-goals)
-    * [Shoppers Goals](#shoppers-goals)
+    * [Shoppers Goals](#shoppers-goals)HRKU-fd5be397-4552-47a2-b72b-e28ac7a82095
 * [Design](#design)
     * [User Stories](#user-stories)
     * [WireFrames](#wireframes)
@@ -54,6 +54,8 @@ This website was created as the 4th Milestone Project for Code Institute's web a
 ### Rationale
 
 **NARTH VAD3R MERCH** is an online store specializing in merch for my online streaming platform and personality. This store caters to fans and followers who would like to wear the brand item and support the channel, offering a wide range of products that celebrate the NARTH VAD3R theme.
+
+There is clear and simple intuitive buttons as guidance to help the user along their way, such as a "Register", "Login", "Logout", "Home", "Create Review", "Edit Review", "Delete Review" and so on. The user must be logged in to edit or delete their comments/reviews.
 <br><br>
 
 ### Owners Goals
