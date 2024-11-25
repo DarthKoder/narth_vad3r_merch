@@ -35,7 +35,7 @@
 
     <title>NARTH VAD3R MERCH {% block extra_title %}{% endblock %}</title>
 </head>
-<body class="container-fluid mt-5 pt-5" style="padding-bottom: 100px;" id="back-to-top">
+<body class="container-fluid mt-5 pt-5" style="padding-bottom: 100px;" id="top">
     <header class="container-fluid fixed-top">
         <!-- Top Navbar -->
         <div id="topnav" class="row bg-black py-lg-2 d-flex align-items-center">
@@ -165,13 +165,13 @@
     <script>
         window.onscroll = function() {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                document.getElementById("back-to-top").style.display = "block";
+                document.getElementById("top").style.display = "block";
             } else {
-                document.getElementById("back-to-top").style.display = "none";
+                document.getElementById("top").style.display = "none";
             }
         };
     
-        document.getElementById("back-to-top").onclick = function(event) {
+        document.getElementById("top").onclick = function(event) {
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
         };
