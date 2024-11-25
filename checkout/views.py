@@ -29,8 +29,8 @@ def cache_checkout_data(request):
 
 
 def checkout(request):
-    stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+    stripe_public_key = settings.STRIPE_PUBLIC_KEY
 
     if request.method == 'POST':
         basket = request.session.get('basket', {})
@@ -49,42 +49,42 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save(commit=False)
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid
+            pid = request.POST.get('client_secret')
+            if not pid:
+                messages.error(request, "Payment could not be processed. Please try again.")
+                return redirect(reverse('checkout'))
+            order.stripe_pid = pid.split('_secret')[0]
             order.original_basket = json.dumps(basket)
             order.save()
             for item_id, item_data in basket.items():
                 try:
                     product = Product.objects.get(id=item_id)
                     if isinstance(item_data, int):
-                        order_line_item = OrderLineItem(
+                        OrderLineItem.objects.create(
                             order=order,
                             product=product,
                             quantity=item_data,
                         )
-                        order_line_item.save()
                     else:
                         for size, quantity in item_data['items_by_size'].items():
-                            order_line_item = OrderLineItem(
+                            OrderLineItem.objects.create(
                                 order=order,
                                 product=product,
                                 quantity=quantity,
                                 product_size=size,
                             )
-                            order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your bag wasn't found in our database. "
-                        "Please call us for assistance!")
-                    )
+                        "One of the products in your basket wasn't found in our database. "
+                        "Please call us for assistance!"
+                    ))
                     order.delete()
                     return redirect(reverse('view_basket'))
 
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            messages.error(request, 'There was an error with your form. Please double-check your information.')
     else:
         basket = request.session.get('basket', {})
         if not basket:
@@ -103,8 +103,7 @@ def checkout(request):
         order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
