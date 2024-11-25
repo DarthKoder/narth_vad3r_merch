@@ -24,7 +24,7 @@
         <div class="row">
             <div class="col">
                 {% if basket_items %}
-                    <div class="table-responsive rounded">
+                    <div class="table-responsive rounded bg-black">
                         <table class="table table-sm table-borderless text-white">
                             <thead class="bg-danger">
                                 <tr>
@@ -101,7 +101,7 @@
                                     </td>
                                 </tr>
                             {% endfor %}
-                            <tr class="bg-dark text-white">
+                            <tr class="bg-black text-white">
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
