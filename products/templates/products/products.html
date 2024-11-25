@@ -16,7 +16,7 @@
         <div class="col text-center mt-3">
             <h2 class="logo-font text-red">Products</h2>
             {% for c in current_categories %}
-                <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}">
+                <a class="category-badge text-decoration-none" href="{% url 'products' %}?category={{ c.name }}" aria-label="Filter by category {{ c.friendly_name }}">
                     <span class="p-3 mt-3 badge badge-dark text-white rounded-0 border border-danger" style="font-size: 1.25rem;">
                         {{ c.friendly_name }}
                     </span>
@@ -30,7 +30,8 @@
             <div class="row mt-1 mb-2">
                 <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                     <div class="sort-select-wrapper w-50">
-                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-red bg-black text-white">
+                        <label for="sort-selector" class="sr-only">Sort products</label>
+                        <select id="sort-selector" class="custom-select custom-select-sm rounded-0 border border-red bg-black text-white" aria-label="Sort products">
                             <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                             <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                             <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
@@ -46,7 +47,7 @@
                 <div class="col-12 col-md-6 order-md-first">
                     <p class="text-muted mt-3 text-center text-md-left">
                         {% if search_term or current_categories or current_sorting != 'None_None' %}
-                            <span class="small"><a href="{% url 'products' %}" class="text-red">Products Home</a> | </span>
+                            <span class="small"><a href="{% url 'products' %}" class="text-red" aria-label="Back to products home">Products Home</a> | </span>
                         {% endif %}
                         {{ products|length }} Products{% if search_term %} found for <strong class="text-red">"{{ search_term }}"</strong>{% endif %}
                     </p>
@@ -57,12 +58,12 @@
                 <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                     <div class="card h-100 border-0 bg-black">
                         {% if product.image %}
-                        <a href="{% url 'product_detail' product.id %}">
+                        <a href="{% url 'product_detail' product.id %}" aria-label="View details of {{ product.name }}">
                             <img class="card-img-top img-fluid product-image" src="{{ product.image.url }}" alt="{{ product.name }}">
                         </a>
                         {% else %}
-                        <a href="{% url 'product_detail' product.id %}">
-                            <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                        <a href="{% url 'product_detail' product.id %}" aria-label="View details of {{ product.name }}">
+                            <img class="card-img-top img-fluid product-image" src="{{ MEDIA_URL }}noimage.png" alt="No image available for {{ product.name }}">
                         </a>
                         {% endif %}
                         <div class="card-body pb-0 text-white">
@@ -74,7 +75,7 @@
                                     <p class="lead mb-0 text-left font-weight-bold text-red">£{{ product.price }}</p>
                                     {% if product.category %}
                                     <p class="small mt-1 mb-0">
-                                        <a class="text-muted text-red" href="{% url 'products' %}?category={{ product.category.name }}">
+                                        <a class="text-muted text-red" href="{% url 'products' %}?category={{ product.category.name }}" aria-label="Filter by category {{ product.category.friendly_name }}">
                                             <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
                                         </a>
                                     </p>
@@ -95,7 +96,7 @@
     </div>
 </div>
 <div class="btt-button shadow-sm rounded-0 border border-red">
-    <a class="btt-link d-flex h-100">
+    <a class="btt-link d-flex h-100" aria-label="Back to top">
         <i class="fas fa-arrow-up text-red mx-auto my-auto"></i>
     </a>
 </div>
@@ -105,7 +106,7 @@
 {{ block.super }}
 <script type="text/javascript">
     $('.btt-link').click(function(e) {
-        window.scrollTo(0,0)
+        window.scrollTo(0,0);
     });
 
     $('#sort-selector').change(function() {
