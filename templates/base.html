@@ -21,7 +21,7 @@
     {% block extra_css %}{% endblock %}
 
     {% block corejs %}
-        <script src="https://kit.fontawesome.com/7a366bbe0a.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/7a366bbe0a.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
                 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
@@ -43,10 +43,10 @@
             <div class="col-1 col-sm-3 d-flex justify-content-start text-center align-items-center">
                 <ul class="list-inline list-unstyled mb-0">
                     <li class="list-inline-item dropdown">
-                        <a class="account-icon text-red nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="Open account options">
+                        <a class="account-icon text-red nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="My account">
                             <div class="text-center">
                                 <!-- Account Icon -->
-                                <i class="fa-solid fa-user-group" aria-hidden="true"></i>
+                                <i class="fa-solid fa-user-group"></i>
                             </div>
                             <p class="my-0 d-none d-sm-block">My Account</p> <!-- Default visible text -->
                             <p class="my-0 d-block d-sm-none small">My Account</p> <!-- Smaller text for mobile -->
@@ -69,7 +69,7 @@
 
            <!-- Center: Logo -->
             <div class="col-10 col-sm-6 mx-auto text-center d-flex justify-content-center align-items-center">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link" aria-label="Go to home page">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <h2 class="nv-logo-text text-red my-1">
                         <!-- Responsive Logo Sizes -->
                         <strong class="d-block d-sm-none" style="font-size: 1rem;">NARTH VAD3R MERCH</strong> <!-- Smallest logo for mobile -->
@@ -79,11 +79,13 @@
                 </a>
             </div>
 
+            
+
             <!-- Right: Basket -->
             <div class="col-1 col-sm-3 d-flex justify-content-end align-items-center">
-                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-red{% endif %} nav-link basket-icon d-flex flex-column align-items-center" href="{% url 'view_basket' %}" aria-label="View basket">
+                <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-red{% endif %} nav-link basket-icon d-flex flex-column align-items-center" href="{% url 'view_basket' %}">
                     <!-- Basket Icon -->
-                    <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                    <i class="fa-solid fa-bag-shopping"></i>
                     <p class="my-0 text-center">
                         {% if grand_total %}
                             £{{ grand_total|floatformat:2 }}
@@ -98,12 +100,12 @@
         <!-- Search Bar Below Header -->
         <div class="row bg-black py-1 mt-2"> <!-- Adjusted mt-5 to avoid overlapping -->
             <div class="col-12 text-center">
-                <form method="GET" action="{% url 'products' %}" class="w-100" aria-label="Search products">
+                <form method="GET" action="{% url 'products' %}" class="w-100">
                     <div class="input-group col-10 col-md-4 mx-auto search-icon">
-                        <input class="form-control border-black rounded-0" type="text" name="q" placeholder="Looking for something?" aria-label="Search query">
+                        <input class="form-control border-black rounded-0" type="text" name="q" placeholder="Looking for something?">
                         <div class="input-group-append">
-                            <button class="form-control btn btn-red border-red rounded-0" type="submit" aria-label="Submit search">
-                                <i class="fa-brands fa-searchengin" aria-hidden="true"></i>
+                            <button class="form-control btn btn-red border-red rounded-0" type="submit" aria-label="Search">
+                                <i class="fa-brands fa-searchengin"></i>
                             </button>
                         </div>
                     </div>
@@ -112,8 +114,22 @@
         </div> 
 
         <!-- Main Navigation -->
+        <!-- Mobile Navbar -->
         <div class="row bg-black">
-            <nav class="navbar navbar-expand-lg navbar-dark w-100" aria-label="Main navigation">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100">
+                <button class="navbar-toggler mx-auto mt-3" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="d-none d-lg-none d-md-none d-sm-flex w-100 text-center justify-content-center align-items-center">
+                    <div class="d-flex flex-column align-items-center justify-content-center">
+                        {% include 'includes/mobile-top-header.html' %}
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row bg-black">
+            <nav class="navbar navbar-expand-lg navbar-dark w-100">
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
@@ -160,12 +176,13 @@
             window.scrollTo({ top: 0, behavior: "smooth" });
         };
     </script>
+
 {% endblock %}
 </body>
 
 <footer class="bg-black text-white text-center py-3 mt-5">
     <p>&copy; 2024 NARTH VAD3R MERCH. All rights reserved.</p>
-    <a href="#top" class="btn btn-danger" id="back-to-top" aria-label="Back to top">
+    <a href="#top" class="btn btn-danger" id="back-to-top">
         &#8593; Back to Top
     </a>
 </footer>
