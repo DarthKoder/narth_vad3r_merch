@@ -36,14 +36,14 @@
     <title>NARTH VAD3R MERCH {% block extra_title %}{% endblock %}</title>
 </head>
 <body class="container-fluid mt-5 pt-5" style="padding-bottom: 100px;" id="top">
-    <header class="container-fluid fixed-top">
+    <header class="container-fluid fixed-top" id="back-to-top">
         <!-- Top Navbar -->
         <div id="topnav" class="row bg-black py-lg-2 d-flex align-items-center">
             <!-- Left: My Account -->
             <div class="col-1 col-sm-3 d-flex justify-content-start text-center align-items-center">
                 <ul class="list-inline list-unstyled mb-0">
                     <li class="list-inline-item dropdown">
-                        <a class="account-icon text-red nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="account-icon text-red nav-link" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <!-- Account Icon -->
                                 <i class="fa-solid fa-user-group"></i>
@@ -165,13 +165,13 @@
     <script>
         window.onscroll = function() {
             if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                document.getElementById("top").style.display = "block";
+                document.getElementById("back-to-top").style.display = "block";
             } else {
-                document.getElementById("top").style.display = "none";
+                document.getElementById("back-to-top").style.display = "none";
             }
         };
     
-        document.getElementById("top").onclick = function(event) {
+        document.getElementById("back-to-top").onclick = function(event) {
             event.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
         };
