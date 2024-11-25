@@ -3,7 +3,7 @@
 
 /*-------- Misc --------*/
 body {
-    background: url('/media/red-lightning.jpg') no-repeat center center fixed;
+    background-image: url('/media/red-lightning.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #ffffff;
     font-family: 'Lato';
