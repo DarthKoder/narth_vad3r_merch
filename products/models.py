@@ -21,9 +21,9 @@ class Category(models.Model):
 class Product(models.Model):
     category = models.ForeignKey('Category', on_delete=models.CASCADE, blank=True, null=True)
     sku = models.CharField(max_length=50, unique=True)
-    name = models.CharField(max_length=255)
+    name = models.CharField(max_length=500)
     description = models.TextField()
-    materials = models.CharField(max_length=255, blank=True, null=True)
+    materials = models.CharField(max_length=500, blank=True, null=True)
     country_of_origin = models.CharField(max_length=255, blank=True, null=True)
     fit = models.CharField(max_length=255, blank=True, null=True)
     price = models.DecimalField(max_digits=6, decimal_places=2)
