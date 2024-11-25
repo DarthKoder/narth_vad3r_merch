@@ -37,7 +37,7 @@
                             </thead>
 
                             {% for item in basket_items %}
-                                <tr class="bg-black text-white">
+                                <tr class="allauth-form-inner-content bg-black text-white">
                                     <td class="p-3 w-25">
                                         <img class="img-fluid rounded" 
                                              src="{{ item.product.image.url }}" 
@@ -101,7 +101,7 @@
                                     </td>
                                 </tr>
                             {% endfor %}
-                            <tr class="bg-black text-white">
+                            <tr class="allauth-form-inner-content bg-black text-white">
                                 <td colspan="5" class="pt-5 text-right">
                                     <h6><strong>Basket Total: £{{ total|floatformat:2 }}</strong></h6>
                                     <h6>Delivery: £{{ delivery|floatformat:2 }}</h6>
