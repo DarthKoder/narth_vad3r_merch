@@ -1,0 +1,686 @@
+@import url('https://fonts.cdnfonts.com/css/star-wars');
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Orbitron:wght@400..900&family=Teko:wght@300..700&display=swap');
+
+/*-------- Misc --------*/
+body {
+    background: url('/media/red-lightning.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Lato';
+    margin: 10px;
+    padding-top: 164px;
+    overflow-x: hidden; 
+}
+
+header {
+    z-index: 1050;
+    position: fixed; 
+    top: 0;
+    width: 100%;
+    background-color: #000;
+}
+
+.fixed-top {
+    z-index: 1051;
+}
+/*-------- Index Theme --------*/
+
+/* Centering and Black-Red Theme */
+.container.h-100 {
+    position: relative;
+    min-height: 100vh;
+    color: #fff;
+    background-color: #00000000;
+}
+
+.text-black-red {
+    color: #ff0000;
+    text-shadow: 
+        1px 1px 0 #fff,
+        -1px -1px 0 #fff,
+        1px -1px 0 #fff,
+        -1px 1px 0 #fff;
+    font-family: "Orbitron", sans-serif;
+}
+
+.shop-now-button {
+    background-color: #ff0000;
+    color: #fff;
+    border: 2px solid #ff0000;
+    transition: all 0.3s ease-in-out;
+}
+
+.shop-now-button:hover {
+    background-color: #fff;
+    color: #ff0000;
+    border: 2px solid #ff0000;
+}
+
+/* ------ Main ------*/
+
+a {
+    color: #ff0000;
+    text-decoration: none;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #ff0000; 
+    text-shadow: 0 0 10px #ff0000; 
+}
+
+/* Header Styling */
+header {
+    border-bottom: 2px solid #ff0000;
+    z-index: 1000;
+}
+
+#topnav {
+    background-color: #111;
+    border-bottom: 1px solid #ff0000;
+}
+
+#topnav {
+    color: #ff0000; 
+    text-transform: uppercase;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#topnav .nav-link:hover {
+    color: #ff0000;
+    text-shadow: 0 0 5px #ff0000;
+}
+
+.nv-logo-text {
+    color: #ff0000;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #fff;
+    margin: auto;
+}
+
+.nv-logo-text:hover {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff0000;
+}
+
+i.fa {
+    font-size: 1.5em; /* Adjust icon size */
+}
+
+
+.text-info {
+    color: #00ff00 !important;
+}
+
+/* Search Bar Styling */
+input.form-control {
+    background-color: #111;
+    border: 1px solid #ff0000;
+    color: #fff;
+}
+
+button.btn-red {
+    background-color: #ff0000;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button.btn-red:hover {
+    background-color: #d40000;
+}
+
+/* Main Navigation */
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff0000;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+    text-shadow: 0 0 8px #ff0000;
+}
+
+.navbar-toggler {
+    background-color: #ff0000;
+    font-size: 2rem;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+.navbar {
+  background-color: black;
+}
+
+/* Hover effect for the navbar-toggler */
+.navbar-toggler:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+#delivery-banner, h4 {
+    color: #888181;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Toast Messages */
+.message-container .toast {
+    background-color: #111;
+    color: #fff;
+    border: 1px solid #ff0000;
+}
+
+.message-container .toast .toast-header {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.menu-container {
+    margin-top: 20px;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 5px;
+  }
+}
+
+
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+    color: #dc3545;
+    height: 100%;
+}
+
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+/* Ensures the header logo is centered at all times */
+.main-logo-link h2 {
+    border: 1px solid #ff0000;
+    border-radius: 0; 
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5); 
+    margin: 0;
+    padding: 0;
+}
+
+/*------- Nav Bar -------*/
+
+#main-nav {
+    background-color: #000;
+}
+
+.navbar-nav .nav-link {
+    color: #ff0000; 
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff; 
+    text-shadow: 0 0 8px #ff0000; 
+}
+
+
+.dropdown-menu {
+    background-color: #111;
+    border: 1px solid #ff0000;
+    border-radius: 0; 
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.5); 
+}
+
+.dropdown-menu .dropdown-item {
+    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #ff0000;
+    color: #fff;
+    text-shadow: none;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+    color: #fff;
+    background-color: #ff0000;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .dropdown-menu {
+    margin-top: 0.5rem;
+}
+
+.navbar-nav .dropdown-menu:hover {
+    box-shadow: 0 6px 12px rgba(255, 0, 0, 0.75);
+}
+
+
+/* -------- Products -------- */
+
+h2.logo-font {
+    color: #ff0000;
+}
+
+.text-muted {
+    color: #ccc !important;
+}
+
+a.text-muted {
+    color: #ff0000 !important;
+}
+
+a.text-muted:hover {
+    text-decoration: underline;
+}
+
+.card {
+    border: 1px solid #ff0000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(255, 0, 0, 0.7);
+}
+
+.card-body, .card-footer {
+    background-color: black;
+
+}
+
+.product-image {
+    border-bottom: 2px solid #ff0000;
+}
+
+.custom-select {
+    background-color: #000;
+    color: #fff;
+}
+
+.btt-button {
+    background-color: #000;
+    bottom: 20px;
+    right: 20px;
+}
+.btt-button .btt-link {
+    color: #ff0000;
+}
+
+.badge-dark {
+    background-color: #000;
+    color: #ff0000;
+}
+
+.text-red {
+    color: #ff0000 !important;
+}
+.border-red {
+    border-color: #ff0000 !important;
+}
+
+
+
+
+/* Sort Selector */
+.sort-select-wrapper .custom-select {
+    background-color: #111; 
+    color: #fff; 
+    border: 2px solid #ff0000;
+    transition: all 0.3s ease;
+}
+
+.sort-select-wrapper .custom-select:focus {
+    border-color: #ff0000;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+/* Buttons */
+.btt-button {
+    background-color: #ff0000; 
+    border: 2px solid #fff; 
+    color: #000; 
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.btt-button:hover {
+    background-color: #fff;
+    color: #ff0000;
+}
+
+
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+/* ------- Footer ------- */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-top: 2px solid #ff0000; /* Red top border */
+    text-align: center;
+    padding: 15px 0;
+    z-index: 1000; 
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #ff0000;
+    color: white;
+    border-radius: 50%;
+    font-size: 24px;
+    padding: 10px;
+    text-align: center;
+}
+
+#back-to-top:hover {
+    background-color: #d40000;
+}
+
+
+/* ------- toasts ------ */
+
+/* Toast Container */
+.toast {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7);
+    border: 2px solid #ff0000;
+}
+
+/* Toast Header */
+.toast-header {
+    font-family: "Lato", sans-serif;
+    font-size: 1rem; 
+}
+
+/* Capper (top border indicator) */
+.toast-capper {
+    height: 5px;
+}
+
+/* Toast Body */
+.toast-body {
+    font-family: "Lato", sans-serif;
+    font-size: 0.9rem;
+    padding: 1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Close Button */
+.toast .close {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.toast .close:hover {
+    opacity: 1;
+}
+
+/* Arrow-Up for Toast */
+.arrow-up {
+    position: relative;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #ff0000;
+}
+
+/* Animation for the Toast */
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.toast {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .toast {
+        font-size: 0.85rem;
+    }
+
+    .toast .close {
+        font-size: 1rem;
+    }
+}
+
+
+.message-container {
+    color: #000;
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+/* ------ Allauth form formatting ------ */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d; 
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content.bg-black {
+    background-color: #000;
+    color: #fff;
+
+.allauth-form-inner-content input::placeholder {
+    color: #ff9419;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #ff0000;
+    border: 1px solid #d10000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #ffffff;
+    border-color: #ff0000;
+}
+
+.allauth-form-inner-content a {
+	color: #ff0000;
+    position: relative;
+    z-index: 2;
+}
+
+/* --------- Media Queries ---------*/
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  }
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
+    }
+}
+
+@media (max-width: 576px) {
+    .navbar-toggler {
+        font-size: 1.5rem; /* Slightly smaller font on smaller screens */
+        padding: 0.4rem; /* Adjust padding for smaller screens */
+    }
+}
+}
