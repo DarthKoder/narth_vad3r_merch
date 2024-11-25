@@ -58,6 +58,12 @@ header {
 
 /* ------ Main ------*/
 
+body {
+    background-color: url('/media/red-lightning.jpg') no-repeat center center fixed; 
+    color: #fff; 
+    
+}
+
 a {
     color: #ff0000;
     text-decoration: none;
@@ -191,6 +197,14 @@ button.btn-red:hover {
     padding: 15px;
     border-radius: 5px;
   }
+
+/* Footer (Optional) */
+footer {
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 2px solid #ff0000; /* Red top border */
 }
 
 
@@ -419,10 +433,8 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #111;
-    color: #fff;
-    text-align: center;
-    border-top: 2px solid #ff0000; /* Red top border */
+    background-color: #000000;
+    color: white;
     text-align: center;
     padding: 15px 0;
     z-index: 1000; 
