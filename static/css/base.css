@@ -58,12 +58,6 @@ header {
 
 /* ------ Main ------*/
 
-body {
-    background-color: #111; 
-    color: #fff; 
-    
-}
-
 a {
     color: #ff0000;
     text-decoration: none;
