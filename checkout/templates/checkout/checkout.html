@@ -16,7 +16,7 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container mt-5 mp-5">
+    <div class="container mt-5">
         <div class="row mt-5 pt-5">
             <div class="col">
                 <hr>
@@ -26,6 +26,7 @@
         </div>
 
         <div class="row">
+            <!-- Order Summary Section -->
             <div class="col-12 col-lg-6 order-lg-last mb-5">
                 <p class="text-muted">Order Summary ({{ product_count }})</p>
                 <div class="row">
@@ -41,9 +42,9 @@
                         <div class="col-2 mb-1">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
-                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ product.name }}">
+                                    <img class="w-100" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
                                 {% else %}
-                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                                    <img class="w-100" src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}">
                                 {% endif %}
                             </a>
                         </div>
@@ -53,7 +54,7 @@
                             <p class="my-0 small text-muted">Qty: {{ item.quantity }}</p>
                         </div>
                         <div class="col-3 text-right">
-                            <p class="my-0 small text-muted">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
+                            <p class="my-0 small text-muted">£{{ item.product.price|calc_subtotal:item.quantity }}</p>
                         </div>
                     </div>
                 {% endfor %}
@@ -65,76 +66,70 @@
                         <p class="my-0">Grand Total:</p>
                     </div>
                     <div class="col-3">
-                        <p class="my-0">£{{ total | floatformat:2 }}</p>
-                        <p class="my-0">£{{ delivery | floatformat:2 }}</p>
-                        <p class="my-0"><strong>£{{ grand_total | floatformat:2 }}</strong></p>
+                        <p class="my-0">£{{ total|floatformat:2 }}</p>
+                        <p class="my-0">£{{ delivery|floatformat:2 }}</p>
+                        <p class="my-0"><strong>£{{ grand_total|floatformat:2 }}</strong></p>
                     </div>
                 </div>
             </div>
+
+            <!-- Checkout Form Section -->
             <div class="col-12 col-lg-6">
                 <p class="text-muted">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
+                    <!-- Customer Details -->
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
-                        {{ order_form.full_name | as_crispy_field }}
-                        {{ order_form.email | as_crispy_field }}
+                        {{ order_form.full_name|as_crispy_field }}
+                        {{ order_form.email|as_crispy_field }}
                     </fieldset>
+
+                    <!-- Delivery Information -->
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
-                        {{ order_form.phone_number | as_crispy_field }}
-                        {{ order_form.street_address1 | as_crispy_field }}
-                        {{ order_form.street_address2 | as_crispy_field }}
-                        {{ order_form.town_or_city | as_crispy_field }}
-                        {{ order_form.county | as_crispy_field }}
-                        {{ order_form.postcode | as_crispy_field }}
-                        {{ order_form.country | as_crispy_field }}
-                        <div class="form-check form-check-inline float-right mr-0">
-							{% if user.is_authenticated %}
-								<label class="form-check-label" for="id-save-info">Save this delivery information to my profile</label>
-                                <input class="form-check-input ml-2 mr-0" type="checkbox" id="id-save-info" name="save-info" checked>
-							{% else %}
-								<label class="form-check-label" for="id-save-info">
-                                    <a class="text-info" href="{% url 'account_signup' %}">Create an account</a> or 
-                                    <a class="text-info" href="{% url 'account_login' %}">login</a> to save this information
+                        {{ order_form.phone_number|as_crispy_field }}
+                        {{ order_form.street_address1|as_crispy_field }}
+                        {{ order_form.street_address2|as_crispy_field }}
+                        {{ order_form.town_or_city|as_crispy_field }}
+                        {{ order_form.county|as_crispy_field }}
+                        {{ order_form.postcode|as_crispy_field }}
+                        {{ order_form.country|as_crispy_field }}
+                        <div class="form-check form-check-inline float-right">
+                            {% if user.is_authenticated %}
+                                <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
+                                <label class="form-check-label" for="id-save-info">Save this delivery info</label>
+                            {% else %}
+                                <label class="form-check-label">
+                                    <a href="{% url 'account_signup' %}" class="text-info">Create an account</a> or 
+                                    <a href="{% url 'account_login' %}" class="text-info">log in</a> to save your info.
                                 </label>
-							{% endif %}
-						</div>
+                            {% endif %}
+                        </div>
                     </fieldset>
+
+                    <!-- Payment Information -->
                     <fieldset class="px-3">
                         <legend class="fieldset-label text-black px-2 w-auto">Payment</legend>
                         <p class="small text-muted">Enter your card details below:</p>
-                        <!-- Stripe Card Element -->
-                        <div id="card-element" class="form-control mb-3">
-                            <!-- Stripe Elements will create this input -->
-                        </div>
-                        <!-- Used to display form errors -->
+                        <div id="card-element" class="form-control mb-3"></div>
                         <div id="card-errors" class="text-danger mb-3" role="alert"></div>
-                        <!-- Pass the client secret to the view -->
-                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                        <input type="hidden" name="client_secret" value="{{ client_secret }}">
                     </fieldset>
-                    
 
-                    <div class="submit-button text-right text-white mt-5 mb-2">                    
-						<a href="{% url 'view_basket' %}" class="btn btn-outline-black rounded-0 text-white">
-							<span class="icon">
-								<i class="fas fa-chevron-left"></i>
-							</span>
-							<span class="font-weight-bold">Adjust Basket</span>
-						</a>
-						<button id="submit-button" class="btn btn-black rounded-0 text-white">
-							<span class="font-weight-bold">Complete Order</span>
-							<span class="icon">
-								<i class="fas fa-lock"></i>
-							</span>
-						</button>
-						<p class="small text-danger my-0">
-							<span class="icon">
-								<i class="fas fa-exclamation-circle"></i>
-							</span>
-							<span>Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong></span>
-						</p>
-					</div>
+                    <!-- Submit Button -->
+                    <div class="submit-button text-right text-white mt-5 mb-2">
+                        <a href="{% url 'view_basket' %}" class="btn btn-outline-black rounded-0">
+                            <i class="fas fa-chevron-left"></i> Adjust Basket
+                        </a>
+                        <button id="submit-button" class="btn btn-black rounded-0">
+                            Complete Order <i class="fas fa-lock"></i>
+                        </button>
+                        <p class="small text-danger mt-3">
+                            <i class="fas fa-exclamation-circle"></i>
+                            Your card will be charged <strong>£{{ grand_total|floatformat:2 }}</strong>
+                        </p>
+                    </div>
                 </form>
             </div>
         </div>
@@ -143,7 +138,45 @@
 
 {% block postloadjs %}
     {{ block.super }}
-    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
-    {{ client_secret|json_script:"id_client_secret" }}
-    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        const stripePublicKey = document.getElementById('id_stripe_public_key').textContent;
+        const clientSecret = document.getElementById('id_client_secret').textContent;
+
+        // Initialize Stripe
+        const stripe = Stripe(stripePublicKey);
+        const elements = stripe.elements();
+
+        // Card Element
+        const card = elements.create('card', { style: { base: { fontSize: '16px' } } });
+        card.mount('#card-element');
+
+        // Handle Card Validation Errors
+        card.on('change', event => {
+            const displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+
+        // Form Submission
+        const form = document.getElementById('payment-form');
+        form.addEventListener('submit', async event => {
+            event.preventDefault();
+            const { paymentIntent, error } = await stripe.confirmCardPayment(clientSecret, {
+                payment_method: {
+                    card: card,
+                }
+            });
+
+            if (error) {
+                const displayError = document.getElementById('card-errors');
+                displayError.textContent = error.message;
+            } else {
+                form.submit();
+            }
+        });
+    </script>
 {% endblock %}
