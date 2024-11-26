@@ -112,10 +112,32 @@
                     <fieldset class="px-3">
                         <legend class="fieldset-label text-black px-2 w-auto">Payment</legend>
                         <p class="small text-muted">Enter your card details below:</p>
+
+                        <!-- Card input field for Stripe -->
                         <div id="card-element" class="form-control mb-3"></div>
+
+                        <!-- Display validation errors here -->
                         <div id="card-errors" class="text-danger mb-3" role="alert"></div>
-                        <input type="hidden" name="client_secret" value="{{ client_secret }}">
+
+                        <!-- Hidden field to pass the client_secret -->
+                        <input type="hidden" name="client_secret" id="id_client_secret" value="{{ client_secret }}">
+
+                        <!-- CSRF Token -->
+                        {% csrf_token %}
+                        
+                        <!-- Save Information Checkbox (optional) -->
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" value="save-info" id="id-save-info">
+                            <label class="form-check-label" for="id-save-info">Save this information for next time?</label>
+                        </div>
+
+                        <!-- Payment Form Submit Button -->
+                        <button id="submit-button" class="btn btn-primary w-100" type="submit">
+                            Pay Now
+                        </button>
                     </fieldset>
+
+
 
                     <!-- Submit Button -->
                     <div class="submit-button text-right text-white mt-5 mb-2">
@@ -136,47 +158,10 @@
     </div>
 {% endblock %}
 
+
 {% block postloadjs %}
     {{ block.super }}
-    <script src="https://js.stripe.com/v3/"></script>
-    <script>
-        const stripePublicKey = document.getElementById('id_stripe_public_key').textContent;
-        const clientSecret = document.getElementById('id_client_secret').textContent;
-
-        // Initialize Stripe
-        const stripe = Stripe(stripePublicKey);
-        const elements = stripe.elements();
-
-        // Card Element
-        const card = elements.create('card', { style: { base: { fontSize: '16px' } } });
-        card.mount('#card-element');
-
-        // Handle Card Validation Errors
-        card.on('change', event => {
-            const displayError = document.getElementById('card-errors');
-            if (event.error) {
-                displayError.textContent = event.error.message;
-            } else {
-                displayError.textContent = '';
-            }
-        });
-
-        // Form Submission
-        const form = document.getElementById('payment-form');
-        form.addEventListener('submit', async event => {
-            event.preventDefault();
-            const { paymentIntent, error } = await stripe.confirmCardPayment(clientSecret, {
-                payment_method: {
-                    card: card,
-                }
-            });
-
-            if (error) {
-                const displayError = document.getElementById('card-errors');
-                displayError.textContent = error.message;
-            } else {
-                form.submit();
-            }
-        });
-    </script>
+    {{ stripe_public_key|json_script:"id_stripe_public_key" }}
+    {{ client_secret|json_script:"id_client_secret" }}
+    <script src="{% static 'checkout/js/stripe_elements.js' %}"></script>
 {% endblock %}

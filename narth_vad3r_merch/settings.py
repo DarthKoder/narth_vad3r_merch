@@ -26,7 +26,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [".codeinstitute-ide.net", "127.0.0.1", "localhost", "narth-vad3r-merch-92994612de68.herokuapp.com"]
 
-
+CSRF_TRUSTED_ORIGINS = ["https://8000-darthkoder-narthvad3rme-zk4hz3e0zu0.ws.codeinstitute-ide.net"]
 
 # Application definition
 
