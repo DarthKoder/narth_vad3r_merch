@@ -1,11 +1,11 @@
-# Infinite Realms
+# NARTH VAD3R MERCH
 ----------------
 This website was created as the 4th Milestone Project for Code Institute's web application development course.
 
-<img src="./documentation/responsiveness/responsive-mockup.png">
+<img src="/media/homepage.png">
 <br><br>
 
-**[Link to the Deployed Site]()**
+**[Link to the Deployed Site](https://narth-vad3r-merch-92994612de68.herokuapp.com/)**
 <br><br>
 ----------------
 
@@ -26,16 +26,12 @@ This website was created as the 4th Milestone Project for Code Institute's web a
     * [Homepage](#homepage)
     * [Products Page](#products)
     * [Product Details Page](#product-details-page)
+    * [Add Review Page](#add-review-page)
+    * [Edit Review Page](#edit-review-page)
     * [Bag Page](#bag-page)
     * [Checkout Page](#checkout-page)
     * [Checkout Success Page](#checkout-success-page)
     * [Profile Page](#profile-page)
-    * [Contact Us Page](#contact-us-page)
-    * [Add Review Page](#add-review-page)
-    * [Edit Review Page](#edit-review-page)
-    * [Add Product Page](#add-product-page)
-    * [Edit Product Page](#edit-product-page)
-    * [Enquiries Page](#enquiries-page)
     * [Send Response Page](#send-response-page)
     * [Allauth Pages](#allauth-pages)
     * [404 Error Page](#404-error-page)
@@ -139,8 +135,8 @@ Schema to show tables in database along with their relation to each other, also 
     * Primary colours used on the website: ![Color Scheme](/starwars_blog/static/img/star-wars-blog-clour-palette.png)
 
  * Typography
-    * 'Orbitron' font is the main font used throughout the site with the addition of "Star Wars". These all have sans-serif as its fallback font, in case the imported fonts dont load for any reason.
-    * The main logo uses the 'Star Wars' font.
+    * 'Orbitron' font is the main font used throughout the site as this is the font that goes with the brands theme. All have sans-serif as its fallback font, in case the imported fonts dont load for any reason.
+    * The main logo uses the 'Orbitron' font.
     * "Star Wars" have been used in the page titles and "Orbitron" has been used for the paragraph text.
  <br><br>
 
@@ -150,34 +146,29 @@ Schema to show tables in database along with their relation to each other, also 
 
  #### Navbar
 
-The website's navigation comprises two key elements: the top navigation and the main navigation. The top navigation, depicted below, features essential functionalities. Visitors can access the site's logo, conduct product searches using the search bar, and either "Register" or "Login" via the "My Account" icon. Additionally, users can easily view the total number of items in their shopping bag. Once signed in, the options available in the "My Account" dropdown menu vary based on the user's level. Shop Owners/Administrators have access to "Product Management" and "Enquiries", while shoppers can navigate to "My Profile" or "Contact Us". Both user types possess the ability to log out from the "My Account" dropdown.
+The website's navigation comprises two key elements: the top navigation and the main navigation. The top navigation, depicted below, features essential functionalities. Visitors can access the site's logo, conduct product searches using the search bar, and either "Register" or "Login" via the "My Account" icon. Additionally, users can easily view the total number of items in their shopping bag. Once signed in, the options available in the "My Account" dropdown menu where they can access "My Profile" and "Logout".
 
 The second component, the main navigation, empowers visitors to explore various product categories. This component is accessible through the hamburger icon on mobile devices. This navigation system and all of its constituent elements have been meticulously designed to be fully responsive, as exemplified by the accompanying screenshots.
 
 <details>
 <summary>Navbar - Desktop</summary>
 <br>
-<img src="documentation/readme_images/navbar-desktop.png">
+<img src="/media/navbar-dt.png">
 </details>
 <details>
 <summary>Navbar - Mobile</summary>
 <br>
-<img src="documentation/readme_images/navbar-mobile.png">
+<img src="/media/navbar-mobile.png">
 </details>
 <details>
-<summary>My Account - Logged out</summary>
+<summary>My Account - Logout</summary>
 <br>
-<img src="documentation/readme_images/my-account-logged-out.png">
+<img src="/media/logout-dt-lighthouse.png">
 </details>
 <details>
-<summary>My Account - Shopper</summary>
+<summary>My Account Profile</summary>
 <br>
-<img src="documentation/readme_images/my-account-shopper.png">
-</details>
-<details>
-<summary>My Account - Shop Owner/Administrator</summary>
-<br>
-<img src="documentation/readme_images/my-account-admin.png">
+<img src="/media/profile.png">
 </details>
 
 This deliberate design ensures that visitors can seamlessly and intuitively navigate the site, regardless of their device or screen size, enhancing their overall browsing experience.
@@ -185,45 +176,20 @@ This deliberate design ensures that visitors can seamlessly and intuitively navi
 
 #### Footer
 
-The footer is a consistent element present on every page of the website. It serves as a valuable navigation tool for mobile users, providing direct access to the homepage, especially since the navbar logo may not be easily accessible on smaller screens.
-
-Within the footer, users will find a concise "About Us" section, offering a brief overview of the store's mission or purpose. Additionally, there are links to social media accounts, allowing users to connect with the brand on various platforms and stay updated with the latest news and promotions.
-
-A noteworthy disclaimer is also included, informing users that any payments processed through Stripe are conducted in test mode. This ensures transparency and sets clear expectations for users engaging in transactions on the site.
-
-Overall, the footer serves as a well-structured and informative section, enhancing user experience by providing easy access to key information and navigation options, while also reinforcing trust and transparency in the payment process.
+The footer is a consistent element present on every page of the website. It serves as a valuable navigation tool for mobile users, providing a basic copyright text. When scrolling down, amongst the footer a "back to top" button will appear to take you to the top of the page when pressed.
 
 <details>
-<summary>Footer - Desktop</summary>
+<summary>Footer</summary>
 <br>
-<img src="documentation/readme_images/footer-desktop.png">
+<img src="/media/footer.png">
 </details>
 <details>
-<summary>Footer - Mobile</summary>
+<summary>Footer - With Back Button</summary>
 <br>
-<img src="documentation/readme_images/footer-mobile.png">
+<img src="/media/footer-backbtn.png">
 </details>
 <br><br>
 
-#### Modal
-
-The inclusion of modals is a deliberate design choice implemented in scenarios where a delete action is initiated by the user. This feature serves as a protective measure to mitigate the risk of accidental deletions.
-
-When a user clicks on a delete button, a modal window is triggered, prompting the user to confirm their intention to proceed with the deletion. This additional step acts as a safeguard, providing users with a final opportunity to reconsider before committing to the action.
-
-By incorporating modals in this context, the website prioritizes user experience and safety, ensuring that critical operations, such as deletions, are deliberate and intentional, thereby reducing the likelihood of unintended consequences.
-
-<details>
-<summary>Modal - Delete Product</summary>
-<br>
-<img src="documentation/readme_images/modal-delete-product.png">
-</details>
-<details>
-<summary>Modal - Delete Review</summary>
-<br>
-<img src="documentation/readme_images/modal-delete-review.png">
-</details>
-<br><br>
 
 #### Toasts
 
@@ -241,15 +207,6 @@ Provides informative messages that do not require immediate action from the user
 4. Warning Toast:
 Warns the user about a situation that may require their attention. Accented in yellow.
 
-#### Favicon 
-
-The website's favicon, the small icon displayed in the browser tab, was created by cropping the initial section of the navbar logo. This customized favicon was generated using the online tool available at [Favicon](https://favicon.io/). This distinctive icon enhances brand recognition and provides a visual representation of the website for users navigating through multiple browser tabs.
-
-<details>
-<summary>Favicon</summary>
-<br>
-<img src="documentation/readme_images/favicon.png">
-</details>
 <br><br>
 
 ### Homepage
@@ -259,12 +216,12 @@ The homepage has a minimalist design, featuring a tagline that encapsulates the 
 <details>
 <summary>Homepage - Desktop</summary>
 <br>
-<img src="documentation/readme_images/homepage-desktop.png">
+<img src="/media/homepage.png">
 </details>
 <details>
 <summary>Homepage - Mobile</summary>
 <br>
-<img src="documentation/readme_images/homepage-mobile.png">
+<img src="/media/homepage-mobile.png">
 </details>
 <br><br>
 
@@ -275,56 +232,28 @@ The Products Page dynamically showcases products sourced from the database, cont
 <details>
 <summary>Products - Desktop</summary>
 <br>
-<img src="documentation/readme_images/all-products-desktop.png">
+<img src="/media/products.png">
 </details>
 <details>
 <summary>Products - Mobile</summary>
 <br>
-<img src="documentation/readme_images/all-products-mobile.png">
+<img src="/media/products-mobile.png">
 </details>
 <br><br>
 
- **Products Page Components**
-
- 1. Heading Display: This section prominently displays either "All Products" or the name of the currently selected category, providing users with clear context regarding the displayed products.
-
-<details>
-<summary>All Products Heading</summary>
-<br>
-<img src="documentation/readme_images/all-products-heading.png">
-</details>
-<details>
-<summary>Category Heading</summary>
-<br>
-<img src="documentation/readme_images/category-heading.png">
-</details>
 <br><br>
 
-2. Subcategory Buttons: Located beneath the heading, these buttons represent subcategories within the selected category (if one selected). The currently selected subcategory has differing styling, providing users with clear navigation cues.
-
-<details>
-<summary>Statues Subcategory</summary>
-<br>
-<img src="documentation/readme_images/statues-subcategory.png">
-</details>
-<details>
-<summary>Soft & Plush Subcategory</summary>
-<br>
-<img src="documentation/readme_images/soft-plush-subcategory.png">
-</details>
-<br><br>
-
-3. Products Information: Positioned below the sort selector on mobile and to the left of the page on desktop, this paragraph provides users with essential information. It includes details such as the total number of products available and any active search terms.
+3. Products Detail: When clicked on a product from the product page, the user will be taken to the product detail page. This is where the user can find all the information on the product such as description, materials, fit etc.
 
 <details>
 <summary>Products Information - Desktop</summary>
 <br>
-<img src="documentation/readme_images/products-info-desktop.png">
+<img src="/media/product_detail.png">
 </details>
 <details>
 <summary>Products Information - Mobile</summary>
 <br>
-<img src="documentation/readme_images/products-info-mobile.png">
+<img src="/media/product-detail-mobile.png">
 </details>
 <br><br>
 
@@ -333,31 +262,22 @@ The Products Page dynamically showcases products sourced from the database, cont
 <details>
 <summary>Sort Selector</summary>
 <br>
-<img src="documentation/readme_images/sort-selector.png">
+<img src="/media/sort-selector.png">
 </details>
 <br><br>
 
 5. Product Cards: Each product is displayed in an individual card format. Cards are arranged in column amounts suitable for screen size of the user. The card includes:
 
-* Product Image: Clickable and serves as a direct link to the product's detail page, providing users with a visual representation of the product.
+* Product Image: Clickable and serves as a direct link to the product's detail page, providing users with a visual representation of the product, also has glow and animation on hover.
 * Product Name: Clearly states the name of the product.
-* Manufacturer: Displays the name of the manufacturer or publisher responsible for producing the product.
+* Rating: Displays the product rating to help users.
 * Price: Indicates the cost of the product.
 * Category and Subcategory: Specifies the specific category and subcategory to which the product belongs redirects to a view of products filtered by relevant category or subcategory.
 
 <details>
 <summary>Product Card</summary>
 <br>
-<img src="documentation/readme_images/product-card.png">
-</details>
-<br><br>
-
-6. Edit and Delete Links: Additional options available on product cards to shop owners or administrators. These links allow for administrative actions to be performed on the product.
-
-<details>
-<summary>Edit and Delete Links</summary>
-<br>
-<img src="documentation/readme_images/edit-delete-links.png">
+<img src="/media/cards.png">
 </details>
 <br><br>
 
@@ -368,16 +288,13 @@ The Products Page dynamically showcases products sourced from the database, cont
 <details>
 <summary>Product Details - Desktop</summary>
 <br>
-<img src="documentation/readme_images/product-details-desktop.png">
+<img src="/media/product_detail.png">
 </details>
 <details>
 <summary>Product Details - Mobile</summary>
 <br>
-<img src="documentation/readme_images/product-details-mobile.png">
+<img src="/media/product-detail-mobile.png">
 </details>
-<br><br>
-
- **Product Details Page Components**
 
  1. Product Image: Presents a visual representation of the product, providing users with a clear view of what they are considering. Image will open in new tab if clicked enabling user closer inspection, in further development image would open in zoomable modal.
 
@@ -388,72 +305,88 @@ The Products Page dynamically showcases products sourced from the database, cont
     * Category and Subcategory: Specifies the specific category and subcategory to which the product belongs redirects to a view of products filtered by relevant category or subcategory.
     * Manufacturer: Displays the name of the manufacturer or publisher responsible for producing the product.
     * Product Description: Offers a comprehensive overview of the product's features, specifications, and benefits, assisting users in making informed decisions.
-
-<details>
-<summary>Product Image and Information</summary>
-<br>
-<img src="documentation/readme_images/product-image-description.png">
-</details>
-<br><br>
+    * Materials: Shows the user what materials the product is made from.
+    * Country of Origin: This tells the user where the black product originally comes from.
+    * Fit: Helps the user know how the product fits to help with sizing when purchasing.
 
 3. Quantity Input Box: Allows users to specify the quantity of the product they wish to add to their shopping bag, ensuring precise ordering. Users are unable to select a quantity outside of the range 1-99, this achieved by disabling the use of the decrement and increment buttons on the quantity input and by checking the validity of the form on submission.
 
-<details>
-<summary>Quantity Input Box</summary>
-<br>
-<img src="documentation/readme_images/quantity-input.png">
-</details>
-<br><br>
-
 4. "Keep Shopping" and "Add to Bag" Buttons: Offer two distinct options for user actions. "Keep Shopping" allows users to continue browsing products, while "Add to Bag" submits the quantity input form and places the selected item into their shopping bag.
-
-<details>
-<summary>"Keep Shopping" and "Add to Bag" Buttons</summary>
-<br>
-<img src="documentation/readme_images/product-details-buttons.png">
-</details>
-<br><br>
 
 5. Reviews Section (Hidden by JS Click to Reveal): Conceals the reviews section by default, providing a cleaner interface. Users can choose to reveal the reviews by clicking on the heading, providing additional feedback and insights about the product. Revealing reviews section also enables the user to submit a review about the product by revealing the "Leave a Review" Button. Ability to add reviews is limited to authenticated users.
 
 <details>
-<summary>Reviews Section - Collapsed</summary>
+<summary>Leave Review</summary>
 <br>
-<img src="documentation/readme_images/reviews-collapsed.png">
+<img src="/media/leave-review.png">
 </details>
 <details>
-<summary>Reviews Section - Expanded</summary>
+<summary>Reviews Section</summary>
 <br>
-<img src="documentation/readme_images/reviews-expanded.png">
+<img src="/media/reviews.png">
+</details>
+
+<br><br>
+
+### Reviews
+
+When the user clicks the Leave a Review button on the product details page, they are redirected to the Add Review page for that product. The Add Review page contributes to a dynamic and interactive shopping experience, empowering users to share their opinions and contribute to the collective knowledge about products available in the store. Ability to add a review is limited to authenticated users.
+
+<details>
+<summary>Add Review- Desktop</summary>
+<br>
+<img src="/media/leave-review.png">
+</details>
+<details>
+<summary>Reviews</summary>
+<br>
+<img src="/media/reviews.png">
 </details>
 <br><br>
 
-6. Edit and Delete Links: Additional options available on product details page to shop owners or administrators. These links are located underneath the product name and allow for administrative actions to be performed on the product.
+**Add Review Page Components**
+
+1. Review Form:
+* Title Field: Allows the user to input a title for their review.
+* Textarea for Content: Provides a space for the user to write the content of their review.
+* Rating Dropdown: Allows the user to select a rating from 0 to 5, indicating their overall satisfaction with the product.
+
+<br><br>
+
+### Edit Review Page
+
+The Edit Review page serves the purpose of allowing users to make modifications to their existing reviews. It shares a similar structure with the Add Review page, but the form is prepopulated with the current review data. Ability to edit reviews is limited to the user that created the review or Administrator.
 
 <details>
-<summary>Edit and Delete Links</summary>
+<summary>Edit Review - Desktop</summary>
 <br>
-<img src="documentation/readme_images/edit-delete-product-details.png">
+<img src="/media/edit-review.png">
+</details>
+<details>
+<summary>Edit Review - Mobile</summary>
+<br>
+<img src="/media/edit-review-mobile.png">
+</details>
+
+<br><br>
+
+### Basket page
+
+The Basket page enhances the overall shopping experience by giving users control over their selections, enabling them to review and modify their choices, and providing transparent cost information.
+
+<details>
+<summary>Basket - Desktop</summary>
+<br>
+<img src="/media/basket.png">
+</details>
+<details>
+<summary>Basket - Mobile</summary>
+<br>
+<img src="/media/basket-mobile.png">
 </details>
 <br><br>
 
-### Bag page
-
-The Bag page enhances the overall shopping experience by giving users control over their selections, enabling them to review and modify their choices, and providing transparent cost information.
-
-<details>
-<summary>Bag - Desktop</summary>
-<br>
-<img src="documentation/readme_images/bag-desktop.png">
-</details>
-<details>
-<summary>Bag - Mobile</summary>
-<br>
-<img src="documentation/readme_images/bag-mobile.png">
-</details>
-<br><br>
-
- **Bag Page Components**
+ **Basket Page Components**
  
  1. Product Information Section:
 
@@ -473,17 +406,6 @@ The Bag page enhances the overall shopping experience by giving users control ov
 
 * Sub-Total per Item: Displays the total cost for each individual product based on the quantity selected.
 
-<details>
-<summary>Product Information Section - Desktop</summary>
-<br>
-<img src="documentation/readme_images/item-info-desktop.png">
-</details>
-<details>
-<summary>Product Information Section - Mobile</summary>
-<br>
-<img src="documentation/readme_images/item-info-mobile.png">
-</details>
-<br><br>
 
 2. Bag Summary:
 
@@ -495,11 +417,6 @@ The Bag page enhances the overall shopping experience by giving users control ov
 
 * Free Delivery Threshold Alert: If the grand total is below the free delivery threshold, a prominent text in red advises the shopper how much more they need to spend to qualify for free delivery.
 
-<details>
-<summary>Bag Summary</summary>
-<br>
-<img src="documentation/readme_images/bag-summary.png">
-</details>
 <br><br>
 
 3. Shopping Bag Buttons:
@@ -522,12 +439,12 @@ The Checkout Page plays a pivotal role in ensuring a smooth and secure transitio
 <details>
 <summary>Checkout - Desktop</summary>
 <br>
-<img src="documentation/readme_images/checkout-desktop.png">
+<img src="/media/checkout.png">
 </details>
 <details>
 <summary>Checkout - Mobile</summary>
 <br>
-<img src="documentation/readme_images/checkout-mobile.png">
+<img src="/media/checkout-mobile.png">
 </details>
 <br><br>
 
@@ -551,20 +468,7 @@ The Checkout Page plays a pivotal role in ensuring a smooth and secure transitio
 * Payment Information:
     - Card Information (Handled by Stripe)
 
-<details>
-<summary>Order Form</summary>
-<br>
-<img src="documentation/readme_images/checkout-order-form.png">
-</details>
-<br><br>
-
 2. Order Summary: Provides a clear and detailed overview of the user's selected items, including product images, quantities, names, and subtotals. This allows users to review their order before finalizing the purchase.
-
-For Each Item in the Order:
-* Product Image
-* Quantity
-* Product Name
-* Subtotal for the Item
 
  At the Bottom of the Order Summary:
 * Order Total
@@ -572,42 +476,12 @@ For Each Item in the Order:
 * Grand Total
 If the Grand Total is below the free delivery threshold, a red text warning will inform the user how much more they need to spend to qualify for free delivery.
 
-<details>
-<summary>Order Summary</summary>
-<br>
-<img src="documentation/readme_images/checkout-order-summary.png">
-</details>
-<br><br>
-
 3. Buttons:
 
 "Adjust Bag" Button: Allows users to go back to the shopping bag page to make any necessary adjustments before finalizing the order.
 
 "Complete Order" Button: Submits the order form for processing. Payment is handled securely by Stripe.
 
-<details>
-<summary>Checkout Buttons</summary>
-<br>
-<img src="documentation/readme_images/checkout-buttons.png">
-</details>
-<br><br>
-
-4. User Authentication Links and Profile Integration:
-
-If the user is not logged in, there are links provided to either register for a new account or log in if they already have an existing account. This ensures the accuracy of the delivery information and allows for order tracking.
-
-If the user is logged in, a checkbox option is available to add this delivery information to their user profile. This feature streamlines the ordering process for future purchases, making it more convenient for the user.
-
-<details>
-<summary>User Authentication Links and Profile Integration</summary>
-<br>
-<img src="documentation/readme_images/checkout-user-authentication.png">
-</details>
-<details>
-<summary>User Authentication Links and Profile Integration</summary>
-<br>
-<img src="documentation/readme_images/checkout-profile-intergration.png">
-</details>
 <br><br>
 
 ### Checkout Success Page
@@ -656,17 +530,17 @@ A confirmation email is automatically sent to the user's provided email address.
 
 ### Profile Page
 
-The Profile Page serves as a hub for users to manage their default delivery information, review their order, reviews and enquiries history. It contributes to a seamless and personalized user experience. Ability to access profile page is limited to authenticated users.
+The Profile Page serves as a hub for users to see their account information such as username, email and recent orders. It contributes to a seamless and personalized user experience. Ability to access profile page is limited to authenticated users.
 
 <details>
 <summary>Profile - Desktop</summary>
 <br>
-<img src="documentation/readme_images/profile-desktop.png">
+<img src="/media/profile.png">
 </details>
 <details>
 <summary>Profile - Mobile</summary>
 <br>
-<img src="documentation/readme_images/profile-mobile.png">
+<img src="/media/profile-mobile.png">
 </details>
 <br><br>
 
@@ -681,13 +555,6 @@ The Profile Page serves as a hub for users to manage their default delivery info
 * Country (Dropdown Selection)
 * Postal Code
 
-<details>
-<summary>Default Delivery Information</summary>
-<br>
-<img src="documentation/readme_images/profile-delivery-information.png">
-</details>
-<br><br>
-
 2. Accordion Sections:
 * Order History:
 Displays past orders with the following details for each order:
@@ -696,232 +563,7 @@ Displays past orders with the following details for each order:
 - Items in Order
 - Order Total
 
-<details>
-<summary>Order History</summary>
-<br>
-<img src="documentation/readme_images/profile-order-history.png">
-</details>
 <br><br>
-
-* Reviews Section:
-Lists all reviews made by the user, along with options for edit and delete actions.
-
-<details>
-<summary>Reviews</summary>
-<br>
-<img src="documentation/readme_images/profile-reviews.png">
-</details>
-<br><br>
-
-* Messages Section:
-Displays contact form submissions made by the user, indicating whether a response has been sent or not.
-
-<details>
-<summary>Messages</summary>
-<br>
-<img src="documentation/readme_images/profile-messages.png">
-</details>
-<br><br>
-
-Upon loading the page, the "Order History" section of the accordion is automatically open, displaying the user's order history.
-
-Expanding another section automatically collapses the currently open section. This ensures that only one section of the accordion is open at a time, providing a clean and organized user interface.
-
-### Contact Us Page
-
-The purpose of the Contact Us page is to establish a direct and accessible communication channel between the users and the shop owner. Page is only available to authenticated users.
-
-<details>
-<summary>Contact Us- Desktop</summary>
-<br>
-<img src="documentation/readme_images/contact-us-desktop.png">
-</details>
-<details>
-<summary>Contact Us - Mobile</summary>
-<br>
-<img src="documentation/readme_images/contact-us-mobile.png">
-</details>
-<br><br>
-
-**Contact Us Page Components**
-
-1. Contact Form:
-
-* Dropdown Menu: Provides a range of options for users to select the reason why they want to contact the shop owner. This ensures that enquiries are categorized for efficient handling.
-
-* Text Area: Allows users to compose and leave their message. This provides a space for users to articulate their enquiries, feedback, or requests in detail.
-
-2. Confirmation Email to User:
-
-A confirmation email is automatically sent to the user's provided email address. This email serves as a receipt and contains details of the enquiry that was sent to the shop owner.
-
-### Add Review Page
-
-When the user clicks the Leave a Review button on the product details page, they are redirected to the Add Review page for that product. The Add Review page contributes to a dynamic and interactive shopping experience, empowering users to share their opinions and contribute to the collective knowledge about products available in the store. Ability to add a review is limited to authenticated users.
-
-<details>
-<summary>Add Review- Desktop</summary>
-<br>
-<img src="documentation/readme_images/add-review-desktop.png">
-</details>
-<details>
-<summary>Add Review - Mobile</summary>
-<br>
-<img src="documentation/readme_images/add-review-mobile.png">
-</details>
-<br><br>
-
-**Add Review Page Components**
-
-1. Review Form:
-* Title Field: Allows the user to input a title for their review.
-* Textarea for Content: Provides a space for the user to write the content of their review.
-* Rating Dropdown: Allows the user to select a rating from 0 to 5, indicating their overall satisfaction with the product.
-
-<details>
-<summary>Review Form</summary>
-<br>
-<img src="documentation/readme_images/add-review-form.png">
-</details>
-<br><br>
-
-2. On desktop, an image of the product is available for reference while writing the review. Not available on mobile as it takes up to much screen real estate.
-
-<details>
-<summary>Desktop Image</summary>
-<br>
-<img src="documentation/readme_images/add-review-image.png">
-</details>
-<br><br>
-
-### Edit Review Page
-
-The Edit Review page serves the purpose of allowing users to make modifications to their existing reviews. It shares a similar structure with the Add Review page, but the form is prepopulated with the current review data. Ability to edit reviews is limited to the user that created the review or Shop Owner/Administrator.
-
-<details>
-<summary>Edit Review - Desktop</summary>
-<br>
-<img src="documentation/readme_images/edit-review-desktop.png">
-</details>
-<details>
-<summary>Edit Review - Mobile</summary>
-<br>
-<img src="documentation/readme_images/edit-review-mobile.png">
-</details>
-<br><br>
-
-### Add Product Page
-
- The Add Product page is an essential tool for maintaining and expanding the store's product catalog, allowing Shop Owner/Administrators to efficiently and accurately add new items for customers to explore and purchase. Access to this page is limited specifically to Superusers.
-
-<details>
-<summary>Add Product - Desktop</summary>
-<br>
-<img src="documentation/readme_images/add-product-desktop.png">
-</details>
-<details>
-<summary>Add Product - Mobile</summary>
-<br>
-<img src="documentation/readme_images/add-product-mobile.png">
-</details>
-<br><br>
-
-**Add Product Page Components**
-
-Add Product Form:
-* Category Dropdown: Allows the user to select the appropriate category for the new product from a list of available categories stored in the database.
-* Subcategory Dropdown: Populated dynamically based on the selected category, utilizing an AJAX request and response when category field is changed to provide relevant subcategory options.
-* SKU: Enables the user to input the Stock Keeping Unit (SKU) for the new product.
-* Name.
-* Description.
-* Manufacturer.
-* Price Field.
-* Product Image Widget: Provides functionality to upload an associated image with the new product.
-
-<details>
-<summary>Category and Subcategory Dropdowns</summary>
-<br>
-<video src="documentation/readme_images/add-product-selects.webm" controls="controls"></video>
-</details>
-<br><br>
-
-### Edit Product Page
-
-The Edit Products page serves the purpose of allowing users to make modifications to an existing product. It shares a similar structure with the Add Product page, but the form is prepopulated with the current product data. Ability to edit products is limited to the Shop Owner/Administrator.
-
-<details>
-<summary>Edit Product - Desktop</summary>
-<br>
-<img src="documentation/readme_images/edit-product-desktop.png">
-</details>
-<details>
-<summary>Edit Product - Mobile</summary>
-<br>
-<img src="documentation/readme_images/edit-product-mobile.png">
-</details>
-<br><br>
-
-### Enquiries Page
-
-The purpose of the Enquiries page is to serve as a centralized hub for managing and responding to user enquiries or messages directed to the shop owner. The page is populated with only unresponded enquiries and is accessible exclusively by superusers.
-
-<details>
-<summary>Enquiries - Desktop</summary>
-<br>
-<img src="documentation/readme_images/enquiries-desktop.png">
-</details>
-<details>
-<summary>Enquiries - Mobile</summary>
-<br>
-<img src="documentation/readme_images/enquiries-mobile.png">
-</details>
-<br><br>
-
-**Enquiries Page Components**
-
-1. Table:
-The table displays the following columns:
-* User: Indicates the name of the user who sent the enquiry.
-* Date Enquiry Sent: Shows the date when the enquiry was submitted.
-* Email of User: Displays the email address of the user who sent the enquiry.
-* Reason for Contact: Specifies the category or reason for the user's contact.
-* Reply Button: Links to the Send Response page for addressing the enquiry.
-
-2. Responsive Design:
-Below 768px, the Date column is hidden to ensure the table remains fully visible on various screen sizes. When the screen size is reduced beyond a certain point, the table becomes horizontally scrollable to accommodate all information.
-
-### Send Response Page
-
-The purpose of the Send Response page is to provide a dedicated space for the Shop Owner/Administrator to compose and send responses to user enquiries. It streamlines the process of addressing user enquiries, allowing the Shop Owner/Administrator to provide timely and personalized responses. Access to this page is limited to superusers.
-
-<details>
-<summary>Send Response - Desktop</summary>
-<br>
-<img src="documentation/readme_images/send-response-desktop.png">
-</details>
-<details>
-<summary>Send Response - Mobile</summary>
-<br>
-<img src="documentation/readme_images/send-response-mobile.png">
-</details>
-<br><br>
-
-**Send Response Page Components**
-
-1. Response Form:
-The form includes a textarea where the shop owner can compose a response message.
-
-2. Contact Form Submission Details:
-This section displays all the details of the original contact form submission, including:
-* User's Name
-* User's Email
-* Reason for Contact
-* Original Message
-* Submission Process:
-
-3. Upon submission of the response form, the following actions occur:
-The response_sent field on the contact table in the database is updated to indicate that a response has been sent.
-An email is automatically sent to the user who sent the original enquiry. This email includes the details of their original contact form submission and the response from the shop owner.
 
 ### Allauth Pages
 
@@ -929,7 +571,7 @@ Site utilizes allauth for user account creation and authentication. Allauth is a
 
 1. User Registration: allauth provides a robust mechanism for user registration. Users can sign up by providing essential information such as username, email, and password.
 
-2. Email Confirmation: After registration, allauth automatically sends a confirmation email to the user's provided email address. This ensures that the user's email is valid and accessible.
+2. Sign Up: Users can sign up to the website and create an account using their credentials.
 
 3. Login and Logout: Users can securely log in to the application using their registered credentials. allauth also offers a user-friendly logout process.
 
@@ -954,26 +596,26 @@ The 500 Error Page serves the purpose of handling and communicating 500 errors, 
 * JS/JQuery - for frontend functionality and functions that request and handle data from the backend.
 * Python - for the backend functionality.
     * Python Modules used -
-    * asgiref==3.7.2
-    * boto3==1.28.62
-    * botocore==1.31.62
+    * asgiref==3.8.1
+    * boto3==1.35.67
+    * botocore==1.35.67
+    * crispy-bootstrap5==2024.10
     * dj-database-url==0.5.0
-    * Django==3.2.21
-    * django-allauth==0.41.0
-    * django-countries==7.2.1
-    * django-crispy-forms==1.14.0
-    * django-storages==1.14.2
-    * gunicorn==21.2.0
+    * Django==4.2
+    * django-allauth==65.0.2
+    * django-countries==7.6.1
+    * django-crispy-forms==2.3
+    * django-storages==1.14.4
+    * gunicorn==23.0.0
     * jmespath==1.0.1
-    * oauthlib==3.2.2
-    * Pillow==10.0.1
-    * psycopg2==2.9.9
-    * python3-openid==3.2.0
-    * requests-oauthlib==1.3.1
-    * s3transfer==0.7.0
-    * sqlparse==0.4.4
-    * stripe==6.6.0
-    * urllib3==1.26.17
+    * pillow==11.0.0
+    * psycopg2==2.9.10
+    * psycopg2-binary==2.9.10
+    * s3transfer==0.10.4
+    * sqlparse==0.5.1
+    * stripe==11.1.1
+    * whitenoise==6.8.2
+
 <br><br>
 
 ### Tools
@@ -999,7 +641,362 @@ The 500 Error Page serves the purpose of handling and communicating 500 errors, 
 
 ## Testing
 
-For testing please see the [Testing](/TESTING.md) documentation.
+All Python files have been run through the CI Python Linter to ensure it is PEP8 compliant, all are clear with no errors.
+
+All JavaScript files have been run through JShint and have no errors using jshint esversion: 6.
+
+The W3C Markup Validator and W3C CSS Validator services were used to validate every page of the project, to ensure there were no errors.
+
+ * [W3C Markup Validtor](https://validator.w3.org/)
+ * [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+ * [JS Lint](https://www.jslint.com/)
+ * [JS Hint](https://www.jshint.com/)
+ * [CI Python Linter PEP8](https://pep8ci.herokuapp.com/#)
+
+### Validation results
+
+<details>
+<summary>index.html
+</summary>
+
+![Index.html validation result](/starwars_blog/static/img/index.html-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>register.html
+</summary>
+
+![Register.html validation result](/starwars_blog/static/img/register.html-validation-starwars=blog.png)
+</details>
+
+<details>
+<summary>login.html
+</summary>
+
+![Login.html validation result](/starwars_blog/static/img/login.html-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>create_post.html
+</summary>
+
+![Create_post.html validation result](/starwars_blog/static/img/create_post.html-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>edit_post.html
+</summary>
+
+![Edit_post.html validation result](/starwars_blog/static/img/edit_post.html-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>post.html
+</summary>
+
+![Post.html validation result](/starwars_blog/static/img/edit_post.html-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>modal
+</summary>
+
+![Modal validation result](/starwars_blog/static/img/modal-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>style.css
+</summary>
+
+![CSS validation result](/starwars_blog/static/img/starwars-blog-css-validation.png)
+</details>
+
+<details>
+<summary>script.js
+</summary>
+
+![JavaScript validation result](/starwars_blog/static/img/starwars-blog-jshint-report.png)
+</details>
+
+<details>
+<summary>models.py
+</summary>
+
+![Models.py validation result](/starwars_blog/static/img/models.py-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>routes.py
+</summary>
+
+![Routes.py validation result](/starwars_blog/static/img/routes.py-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>__init____.py
+</summary>
+
+![__init____.py validation result](/starwars_blog/static/img/init.py-validation-starwars-blog.png)
+</details>
+
+<details>
+<summary>run.py
+</summary>
+
+![Run.py validation result](/starwars_blog/static/img/run.py-validation-starwars-blog.png)
+</details>
+
+### Manual Testing
+
+* The website was tested on Google Chrome & Microsoft Edge.
+* The website was viewed on a desktop computer and Moto G Power mobile phone.
+* A large amount of manual testing was done to ensure all buttons are working correctly.
+* A large amount of manual testing was done to ensure that the logic behind the game worked and the user experience is fulfilled.
+* A large amount of manual testing was done to ensure that there were no bugs hindering the game and any progression.
+* Family and friends were asked to review the website for a better understanding of the user experience.
+* Dev Tools was used to test how the site looks on various screen sizes.
+* Dev Tools Lighthouse was use to test the performance accessibility, best prectices and SEO of each page.
+* JS Lint was used to ensure there are no major issues with the script.
+
+
+| Feature/Test                                          | Expected Outcome.                                                                                                        | Result |
+| ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------ |
+| Logo in Navbar.                                       | Redirect to Homepage.                                                                                                    | Pass.  |
+| Nav Links.                                            | Redirect to relevant pages.                                                                                              | Pass.  |
+| Side Nav                                              | Navbar collapes to Sidenav on mobile devices with correct links.                                                         | Pass.  |
+| CTA Login button on Homepage.                         | Redirects to login page.                                                                                                 | Pass.  |
+| Create Post Button                                    | Opens correct create_post.html                                                                                           | Pass.  |
+| Login Form - empty.                                   | Will not submit if empty fields.                                                                                         | Pass.  |
+| Login Form - incorrect username.                      | Form submits but doesn't login, gives falsh message.                                                                     | Pass.  |
+| Login Form - incorrect password.                      | Form submits but doesn't login, gives falsh message.                                                                     | Pass.  |
+| Login Form - correct details.                         | Form submits and redirects user to relevant page for that user.                                                          | Pass.  |
+| Register link on Log In Form.                         | Redirects to register page.                                                                                              | Pass.  |
+| Register Form - empty.                                | Will not submit if empty fields.                                                                                         | Pass.  |
+| Register Form - username exists.                      | Form submits but does not register user, error page with username already exists.                                        | Pass.  |
+| Register Form - new user details.                     | Form submits adding new user and redirects to Homepage with flash message.                                               | Pass.  |
+| Log In link on Register Form.                         | Redirects to Log In page.                                                                                                | Pass.  |
+| Log Out Button.                                       | Logs user out, clears session and redirects to Homepage.                                                                 | Pass.  |
+| Remember Me.                                          | Remember me checkbox remembers the users username when the page is refreshed.                                            | Pass.  |
+| See Full Post CTA.                                    | Redirects to full post.html of specific post.                                                                            | Pass.  |
+| Post Fields.                                          | All post fields can be filled out.                                                                                       | Pass.  |
+| Post Required Fields - No Completed.                  | Will not submit if required fields are empty.                                                                            | Pass.  |
+| Post Submit CTA Button.                               | Submit button works , post successfully posted with flash message.                                                       | Pass.  |
+| Post Edit CTA Button Visibility.                      | Post Owner Only Can See Edit CTA Button.                                                                                 | Pass.  |
+| Post Edit CTA Button - Functions.                     | Post owner can use button and takes them to the edit_post.html and are able to edit all post information.                | Pass.  |
+| Post Edit Submit CTA Button.                          | Once edited , the post owner can submit the post and recieve a flash message of successful post.                         | Pass.  |
+| Post Delete CTA Button Visibility.                    | Post Owner Only Can See Delete CTA Button.                                                                               | Pass.  |
+| Post Delete CTA Button - Functions.                   | Post owner can use button and executes the modal pop up for confirmation.                                                | Pass.  |
+| Comment Visibility.                                   | Comments are visible to users who clicked on specific post.                                                              | Pass.  |
+| Comment Posting - User Not Logged In.                 | Comments are visible to users but will be prompted to login to add a comment.                                            | Pass.  |
+| Comment Posting - User Logged In.                     | Comments are visible and user can add a comment.                                                                         | Pass.  |
+| Comment Posting - Texr Field.                         | Comment text field works as expected.                                                                                    | Pass.  |
+| Comment Posting - Submit CTA button.                  | Comments are successfully posted if user is logged in and required fields are completed, flash message when complete.    | Pass.  |
+| Comment Delete CTA Button - Functions.                | Comment owner can use button and executes the modal pop up for confirmation.                                             | Pass.  |
+| Delete Modal.                                         | Delete button successfully deletes post/comment with flash message of confirmation, cancel button removes the modal.     | Pass.  |
+| Back To Discussion CTA Button.                        | Redirects to hompage.                                                                                                    | Pass.  |
+| Type a non-existent page path.                        | Redirects to 404 page.                                                                                                   | Pass.  |
+| 404 page                                              | Appears as should with navigation back to homepage.                                                                      | Pass.  |
+| 404 page - home button.                               | Redirects to Homepage.                                                                                                   | Pass.  |
+
+
+### Lighthouse Report
+
+#### Desktop analysis
+<details>
+<summary>Home Page
+</summary>
+
+![Homepage Screen Lighthouse Report](/media/homepage-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>Products Page
+</summary>
+
+![Create Post Screen Lighthouse Report](/media/products-page-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>Product Detail Page
+</summary>
+
+![Edit Post Screen Lighthouse Report)](/media/product-detail-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>Edit Review Page
+</summary>
+
+![Register Screen Lighthouse Report](/media/edit-review-m-lighthouse.png)
+</details>
+
+<details>
+<summary>Basket Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/basket-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>Checkout Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/checkout-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>Checkout Success Page
+</summary>
+
+![Login Screen Lighthouse](/media/basket-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>My Account
+</summary>
+
+![Login Screen Lighthouse Report](/media/my-account-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>Sign Up Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/sign-up-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>Sign In Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/login-dt-lighthouse.png)
+</details>
+
+<details>
+<summary>Logout Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/logout-dt-lighthouse.png)
+</details>
+
+#### Mobile analysis
+<details>
+<summary>Home Page
+</summary>
+
+![Homepage Screen Lighthouse Report (index.html)](/starwars_blog/static/img/index-mobile-lighthouse-report.png)
+</details>
+
+<details>
+<summary>Create Post Page
+</summary>
+
+![Create Post Screen Lighthouse Report (index.html)](/starwars_blog/static/img/create-post-mobile-lighthouse-report.png)
+</details>
+
+<details>
+<summary>Edit Post Page
+</summary>
+
+![Edit Post Screen Lighthouse Report (index.html)](/starwars_blog/static/img/edit-post-mobile-lighthouse-report.png)
+</details>
+
+<details>
+<summary>Register Post Page
+</summary>
+
+![Register Screen Lighthouse Report (index.html)](/starwars_blog/static/img/register-mobile-lighthouse-report.png)
+</details>
+
+<details>
+<summary>Login Page
+</summary>
+
+![Login Screen Lighthouse Report (index.html)](/starwars_blog/static/img/login-mobile-lighthouse-report.png)
+</details>
+
+---
+
+## Deployment and local development
+
+### Heroku
+
+To deploy to Heroku:
+1. In GitPod CLI, the root directory of the project, run:
+    pip3 freeze --local > requirements.txt
+    to create a requirements.txt file containing project dependencies.
+2. In the Gitpod project workspace root directory, create a new file called Procfile, with capital 'P'.
+    Open the Procfile. Inside the file, check that web: python3 app.py has been added when creating the file
+    Save the file.
+3. Push the 2 new files to the GitHub repository
+4. Login to Heroku, select Create new app, add the name for your app and choose your closest region.
+5. Navigate to the Deploy tab on Heroku dashboard and select Github, search for your repository and click 'connect'.
+6. Navigate to the settings tab, click reveal config vars and input the following:
+
+| Key | Value |
+| :---: | :---: |
+| DATABASE_URL | postgresql |
+| IP | 0.0.0.0 |
+| PORT | 5000 |
+| SECRET_KEY | mysecretkey |
+
+Actual Enviroment variables not disclosed for security.
+
+### GitHub Pages
+
+GitHub Pages used to deploy live version of the website.
+1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/star-wars-blog)
+2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
+3. Scroll down the Settings page until you locate "GitHub Pages".
+4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
+5. The page will automatically refresh.
+6. Scroll back to locate the now-published site [link](https://darthkoder.github.io/star-wars-blog/) in the "GitHub Pages" section.
+
+### Forking the GitHub Repository
+
+By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
+
+1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/star-wars-blog)
+2. At the top of the Repository(under the main navigation) locate "Fork" button.
+3. Now you should have a copy of the original repository in your GitHub account.
+
+### Local Clone
+
+1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/star-wars-blog)
+2. Under the repository name click "Clone or download"
+3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone` and then paste The URL copied in the step 3.
+7. Press Enter and your local clone will be created.
+
+---
+
+## Credits
+
+### Code
+ * Understanding some JavaScript concepts and code needed for certail aspects of the game [W3schools](https://www.w3schools.com/)
+ * The README template was helpfully provided by my mentor Mitko at Code Institute [Lunar-Escape](https://github.com/Thomas-Tomo/Lunar-Escape)
+ * Helping with writing and understanding python [Python Tutor](https://pythontutor.com/)
+ * Helping with writing and understanding python and find code that was helpful to me [Python Docs](https://docs.python.org/3/contents.html)
+
+### Content
+
+ * All content was written by the developer.
+ * [Color contrast checker](https://coolors.co/contrast-checker/112a46-acc8e5) was used to decide which colours would be used for the website.
+
+### Media 
+
+All Media used in the site and README is original.
+
+---
+
+## Acknowledgements
+ * My mentor Mitko for helping me with ideas to improve the design and ways to build it. 
+ * W3schools for the information online when needed. 
+ * Python Tutor to help me write and understand python and debug any issues.
+ * Slack community for encouragement and information.
+ * My motivation for this project was my love for Star Wars and wanted to build something for the community. 
 <br><br>
 
 ## Deployment

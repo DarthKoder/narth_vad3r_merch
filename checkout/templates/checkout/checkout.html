@@ -78,6 +78,7 @@
                 <p class="text-muted">Please fill out the form below to complete your order</p>
                 <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                     {% csrf_token %}
+                    
                     <!-- Customer Details -->
                     <fieldset class="rounded px-3 mb-5">
                         <legend class="fieldset-label small text-black px-2 w-auto">Details</legend>
@@ -95,6 +96,7 @@
                         {{ order_form.county|as_crispy_field }}
                         {{ order_form.postcode|as_crispy_field }}
                         {{ order_form.country|as_crispy_field }}
+                        
                         <div class="form-check form-check-inline float-right">
                             {% if user.is_authenticated %}
                                 <input class="form-check-input" type="checkbox" id="id-save-info" name="save-info" checked>
@@ -122,17 +124,12 @@
                         <!-- Hidden field to pass the client_secret -->
                         <input type="hidden" name="client_secret" id="id_client_secret" value="{{ client_secret }}">
 
-                        <!-- CSRF Token -->
-                        {% csrf_token %}
-                        
                         <!-- Save Information Checkbox (optional) -->
                         <div class="form-check mb-3">
                             <input class="form-check-input" type="checkbox" value="save-info" id="id-save-info">
                             <label class="form-check-label" for="id-save-info">Save this information for next time?</label>
                         </div>
                     </fieldset>
-
-
 
                     <!-- Submit Button -->
                     <div class="submit-button text-right text-white mt-5 mb-2">
@@ -152,7 +149,6 @@
         </div>
     </div>
 {% endblock %}
-
 
 {% block postloadjs %}
     {{ block.super }}

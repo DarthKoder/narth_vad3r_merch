@@ -98,6 +98,7 @@ TEMPLATES = [
     },
 ]
 
+SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 AUTHENTICATION_BACKENDS = (
@@ -145,24 +146,26 @@ else:
         }
     }
 
+# settings.py
+
 LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": False,
-    "handlers": {
-        "file": {
-            "level": "ERROR",
-            "class": "logging.FileHandler",
-            "filename": "errors.log",
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'level': 'ERROR',
+            'class': 'logging.StreamHandler',
         },
     },
-    "loggers": {
-        "django": {
-            "handlers": ["file"],
-            "level": "ERROR",
-            "propagate": True,
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': 'ERROR',  # Log only errors and above
+            'propagate': True,
         },
     },
 }
+
 
 
 
