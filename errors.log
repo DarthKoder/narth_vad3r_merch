@@ -794,3 +794,29 @@ Traceback (most recent call last):
     raise NoReverseMatch("%s is not a registered namespace" % key)
 django.urls.exceptions.NoReverseMatch: 'checkout' is not a registered namespace
 "GET /basket/ HTTP/1.1" 500 180128
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/narth_vad3r_merch/checkout/views.py", line 90, in checkout
+    if not basket:
+           ^^^^^^
+NameError: name 'basket' is not defined
+"GET /checkout/ HTTP/1.1" 500 77071
+Internal Server Error: /checkout/
+Traceback (most recent call last):
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/.pip-modules/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/narth_vad3r_merch/checkout/views.py", line 90, in checkout
+    if not basket:
+           ^^^^^^
+UnboundLocalError: cannot access local variable 'basket' where it is not associated with a value
+"GET /checkout/ HTTP/1.1" 500 77315
