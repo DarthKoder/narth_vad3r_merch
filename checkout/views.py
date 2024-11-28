@@ -10,11 +10,8 @@ from basket.contexts import basket_contents
 
 import stripe
 import json
-import logging
 
-stripe_public_key = settings.STRIPE_PUBLIC_KEY
-stripe_secret_key = settings.STRIPE_SECRET_KEY
-logger = logging.getLogger(__name__)
+
 
 @require_POST
 def cache_checkout_data(request):
@@ -24,12 +21,11 @@ def cache_checkout_data(request):
         stripe.PaymentIntent.modify(pid, metadata={
             'basket': json.dumps(request.session.get('basket', {})),
             'save_info': request.POST.get('save_info'),
-            'username': request.user,
+            'username': str(request.user),
         })
         return HttpResponse(status=200)
     except Exception as e:
-        # Log the error to the console
-        logger.error(f"Error processing payment data: {e}")
+
         
         # Also, display a message to the user
         messages.error(request, 'Sorry, your payment cannot be processed right now. Please try again later.')
@@ -93,7 +89,7 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. Please double-check your information.')
+            messages.error(request, ('There was an error with your form. Please double-check your information.'))
 
     else:
         basket = request.session.get('basket', {})
@@ -103,7 +99,7 @@ def checkout(request):
 
         current_basket = basket_contents(request)
         total = current_basket['grand_total']
-        stripe_total = round(total * 100)  # Convert to cents for Stripe
+        stripe_total = round(total * 100)  
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
@@ -119,8 +115,9 @@ def checkout(request):
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret.split('_secret')[0],  
+        'client_secret': intent.client_secret,  
     }
+    
 
     return render(request, template, context)
 

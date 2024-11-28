@@ -1,6 +1,7 @@
 // Ensure that `stripePublicKey` and `clientSecret` are correctly set
 var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
 var clientSecret = $('#id_client_secret').text().slice(1, -1);  // Ensure the clientSecret is trimmed properly
+console.log("Client secret", clientSecret)
 
 var stripe = Stripe(stripePublicKey);  // Initialize Stripe
 var elements = stripe.elements();  // Create Stripe Elements
