@@ -419,18 +419,12 @@ The Basket page enhances the overall shopping experience by giving users control
 
 <br><br>
 
-3. Shopping Bag Buttons:
+3. Shopping Basket Buttons:
 
 Keep Shopping CTA: A button that redirects the user back to the products page, allowing them to continue browsing and adding more items to their shopping bag.
 
 Secure Checkout: This button initiates the checkout process, leading the user to a secure page to complete their purchase.
 
-<details>
-<summary>Shopping Bag Buttons</summary>
-<br>
-<img src="documentation/readme_images/bag-buttons.png">
-</details>
-<br><br>
 
 ### Checkout Page
 
@@ -656,95 +650,316 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 ### Validation results
 
 <details>
-<summary>index.html
-</summary>
-
-![Index.html validation result](/starwars_blog/static/img/index.html-validation-starwars-blog.png)
+<summary>Homepage</summary>
+<br>
+<img src="/media/homepage-html-validation.png">
 </details>
+<details>
+<summary>Products</summary>
+<br>
+<img src="/media/products-html-validation.png">
+</details>
+<details>
+<summary>Product Detail</summary>
+<br>
+<img src="/media/product-detail-html-validation.png">
+</details>
+<details>
+<summary>Edit Review</summary>
+<br>
+<img src="/media/edit-review-html-validation.png">
+</details>
+<details>
+<summary>Basket</summary>
+<br>
+<img src="/media/basket-html-validation.png">
+</details>
+<details>
+<summary>Checkout</summary>
+<br>
+<img src="/media/checkout-html-validation.png">
+</details>
+<details>
+<summary>Checkout Success</summary>
+<br>
+<img src="/media/checkout-success-html-validation.png">
+</details>
+<details>
+<summary>Sign Up</summary>
+<br>
+<img src="/media/sign-up-html-validation.png">
+</details>
+<details>
+<summary>Login</summary>
+<br>
+<img src="/media/sign-in-html-validation.png">
+</details>
+<details>
+<summary>Logout</summary>
+<br>
+<img src="/media/logout-html-validation.png">
+</details>
+<details>
+<summary>Profile</summary>
+<br>
+<img src="/media/profile-html-validation.png">
+</details>
+<details>
+<summary>404</summary>
+<br>
+<img src="/media/404-html-validation.png">
+</details>
+<details>
+<summary>500</summary>
+<br>
+<img src="/media/500-html-validation.png">
+</details>
+<br><br>
+
+### CSS Validation
+
+All static CSS files pass CSS Validation at [W3C CSS validation service](https://jigsaw.w3.org/css-validator/) with no errors.
 
 <details>
-<summary>register.html
-</summary>
-
-![Register.html validation result](/starwars_blog/static/img/register.html-validation-starwars=blog.png)
+<summary>base.css</summary>
+<br>
+<img src="/media/base-css-validation.png">
 </details>
+<details>
+<summary>checkout.css</summary>
+<br>
+<img src="/media/checkout-css-validation.png">
+</details>
+
+<br><br>
+
+### JS Validation
+
+JS files and scripts on templates run through [JShint](https://jshint.com/) for validation with no errors.
 
 <details>
-<summary>login.html
-</summary>
-
-![Login.html validation result](/starwars_blog/static/img/login.html-validation-starwars-blog.png)
+<summary>Scripts for update and remove links on Bag template.</summary>
+<br>
+<img src="/media/js-validation.png">
 </details>
 
+<br><br>
+
+### Python Validation
+
+Pylance used during development to detect errors and PEP8 compliance, but code also run through [CI PEP8 Linter](https://pep8ci.herokuapp.com/) and passed with no warnings.
+
+#### Root Level
 <details>
-<summary>create_post.html
-</summary>
-
-![Create_post.html validation result](/starwars_blog/static/img/create_post.html-validation-starwars-blog.png)
+<summary>custom-storages.py</summary>
+<br>
+<img src="documentation/python_validation/custom_storages.py-validation.png">
 </details>
-
 <details>
-<summary>edit_post.html
-</summary>
-
-![Edit_post.html validation result](/starwars_blog/static/img/edit_post.html-validation-starwars-blog.png)
+<summary>manage.py</summary>
+<br>
+<img src="documentation/python_validation/manage.py-validation.png">
 </details>
 
+#### Infinite Realms 
 <details>
-<summary>post.html
-</summary>
-
-![Post.html validation result](/starwars_blog/static/img/edit_post.html-validation-starwars-blog.png)
+<summary>asgi.py</summary>
+<br>
+<img src="documentation/python_validation/infinite_realms-asgi.py-validation.png">
 </details>
-
 <details>
-<summary>modal
-</summary>
-
-![Modal validation result](/starwars_blog/static/img/modal-validation-starwars-blog.png)
+<summary>settings.py</summary>
+<br>
+<img src="documentation/python_validation/infinite_realms-settings.py-validation.png">
 </details>
-
 <details>
-<summary>style.css
-</summary>
-
-![CSS validation result](/starwars_blog/static/img/starwars-blog-css-validation.png)
+<summary>urls.py</summary>
+<br>
+<img src="documentation/python_validation/infinite_realms-urls.py-validation.png">
 </details>
-
 <details>
-<summary>script.js
-</summary>
-
-![JavaScript validation result](/starwars_blog/static/img/starwars-blog-jshint-report.png)
+<summary>wsgi.py</summary>
+<br>
+<img src="documentation/python_validation/infinite_realms-wsgi.py-validation.png">
 </details>
 
+#### Infinite Realms 
 <details>
-<summary>models.py
-</summary>
-
-![Models.py validation result](/starwars_blog/static/img/models.py-validation-starwars-blog.png)
+<summary>asgi.py</summary>
+<br>
+<img src="documentation/python_validation/infinite_realms-asgi.py-validation.png">
 </details>
-
 <details>
-<summary>routes.py
-</summary>
-
-![Routes.py validation result](/starwars_blog/static/img/routes.py-validation-starwars-blog.png)
+<summary>settings.py</summary>
+<br>
+<img src="documentation/python_validation/infinite_realms-settings.py-validation.png">
 </details>
-
 <details>
-<summary>__init____.py
-</summary>
-
-![__init____.py validation result](/starwars_blog/static/img/init.py-validation-starwars-blog.png)
+<summary>urls.py</summary>
+<br>
+<img src="documentation/python_validation/infinite_realms-urls.py-validation.png">
 </details>
-
 <details>
-<summary>run.py
-</summary>
-
-![Run.py validation result](/starwars_blog/static/img/run.py-validation-starwars-blog.png)
+<summary>wsgi.py</summary>
+<br>
+<img src="documentation/python_validation/infinite_realms-wsgi.py-validation.png">
 </details>
+
+#### Bag App
+<details>
+<summary>apps.py</summary>
+<br>
+<img src="documentation/python_validation/bag-apps.py-validation.png">
+</details>
+<details>
+<summary>contexts.py</summary>
+<br>
+<img src="documentation/python_validation/bag-contexts.py-validation.png">
+</details>
+<details>
+<summary>forms.py</summary>
+<br>
+<img src="documentation/python_validation/bag-forms.py-validation.png">
+</details>
+<details>
+<summary>urls.py</summary>
+<br>
+<img src="documentation/python_validation/bag-urls.py-validation.png">
+</details>
+<details>
+<summary>views.py</summary>
+<br>
+<img src="documentation/python_validation/bag-views.py-validation.png">
+</details>
+<details>
+<summary>templatetags/bag_tools.py</summary>
+<br>
+<img src="documentation/python_validation/bag-templatetags-bag_tools.py-validation.png">
+</details>
+
+#### Checkout App
+<details>
+<summary>admin.py</summary>
+<br>
+<img src="documentation/python_validation/checkout-admin.py-validation.png">
+</details>
+<details>
+<summary>apps.py</summary>
+<br>
+<img src="documentation/python_validation/checkout-apps.py-validation.png">
+</details>
+<details>
+<summary>models.py</summary>
+<br>
+<img src="documentation/python_validation/checkout-models.py-validation.png">
+</details>
+<details>
+<summary>signals.py</summary>
+<br>
+<img src="documentation/python_validation/checkout-signals.py-validation.png">
+</details>
+<details>
+<summary>urls.py</summary>
+<br>
+<img src="documentation/python_validation/checkout-urls.py-validation.png">
+</details>
+<details>
+<summary>views.py</summary>
+<br>
+<img src="documentation/python_validation/checkout-views.py-validation.png">
+</details>
+<details>
+<summary>webhook_handler.py</summary>
+<br>
+<img src="documentation/python_validation/checkout-webhook_handler.py-validation.png">
+</details>
+<details>
+<summary>webhooks.py</summary>
+<br>
+<img src="documentation/python_validation/checkout-webhooks.py-validation.png">
+</details>
+
+#### Home App
+<details>
+<summary>apps.py</summary>
+<br>
+<img src="documentation/python_validation/home-apps.py-validation.png">
+</details>
+<details>
+<summary>urls.py</summary>
+<br>
+<img src="documentation/python_validation/home-urls.py-validation.png">
+</details>
+<details>
+<summary>views.py</summary>
+<br>
+<img src="documentation/python_validation/home-views.py-validation.png">
+</details>
+
+#### Products App
+<details>
+<summary>admin.py</summary>
+<br>
+<img src="documentation/python_validation/products-admin.py-validation.png">
+</details>
+<details>
+<summary>apps.py</summary>
+<br>
+<img src="documentation/python_validation/products-apps.py-validation.png">
+</details>
+<details>
+<summary>forms.py</summary>
+<br>
+<img src="documentation/python_validation/products-forms.py-validation.png">
+</details>
+<details>
+<summary>models.py</summary>
+<br>
+<img src="documentation/python_validation/products-models.py-validation.png">
+</details>
+<details>
+<summary>urls.py</summary>
+<br>
+<img src="documentation/python_validation/products-urls,py-validation.png">
+</details>
+<details>
+<summary>views.py</summary>
+<br>
+<img src="documentation/python_validation/products-views.py-validation.png">
+</details>
+<details>
+<summary>widgets.py</summary>
+<br>
+<img src="documentation/python_validation/products-widgets.py-validation.png">
+</details>
+
+#### Profiles App
+<details>
+<summary>apps.py</summary>
+<br>
+<img src="documentation/python_validation/profiles-apps.py-validation.png">
+</details>
+<details>
+<summary>forms.py</summary>
+<br>
+<img src="documentation/python_validation/profiles-forms.py-validation.png">
+</details>
+<details>
+<summary>models.py</summary>
+<br>
+<img src="documentation/python_validation/profiles-models.py-validation.png">
+</details>
+<details>
+<summary>urls.py</summary>
+<br>
+<img src="documentation/python_validation/profiles-urls.py-validation.png">
+</details>
+<details>
+<summary>views.py</summary>
+<br>
+<img src="documentation/python_validation/profiles-views.py-validation.png">
+</details>
+
 
 ### Manual Testing
 

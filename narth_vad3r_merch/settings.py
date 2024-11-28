@@ -19,14 +19,21 @@ if os.path.isfile('env.py'):
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = os.getenv('SECRET_KEY','')
+SECRET_KEY = os.getenv('SECRET_KEY', '')
 
 # DEBUG = 'DEVELOPMENT' in os.environ
 DEBUG = True
 
-ALLOWED_HOSTS = [".codeinstitute-ide.net", "127.0.0.1", "localhost", "narth-vad3r-merch-92994612de68.herokuapp.com"]
+ALLOWED_HOSTS = [
+    ".codeinstitute-ide.net",
+    "127.0.0.1",
+    "localhost",
+    "narth-vad3r-merch-92994612de68.herokuapp.com"
+    ]
 
-CSRF_TRUSTED_ORIGINS = ["https://8000-darthkoder-narthvad3rme-zk4hz3e0zu0.ws.codeinstitute-ide.net"]
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-darthkoder-narthvad3rme-zk4hz3e0zu0.ws.codeinstitute-ide.net"
+    ]
 
 # Application definition
 
@@ -46,9 +53,9 @@ INSTALLED_APPS = [
     'basket',
     'checkout',
     'profiles',
-    
+
     # other apps
-    
+
     'crispy_forms',
     'crispy_bootstrap5',
     'storages'
@@ -167,14 +174,13 @@ LOGGING = {
 }
 
 
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME':
+            'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
     },
     {
         'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
@@ -220,14 +226,15 @@ if 'USE_AWS' in os.environ:
     AWS_S3_REGION_NAME = 'eu-north-1'
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
-    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.eu-north-1.amazonaws.com'
-    
-    #Static and media files
+    AWS_S3_CUSTOM_DOMAIN =
+    f'{AWS_STORAGE_BUCKET_NAME}.s3.eu-north-1.amazonaws.com'
+
+    # Static and media files
     STATICFILES_STORAGE = 'custom_storages.StaticStorage'
     STATICFILES_LOCATION = 'static'
     DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
     MEDIAFILES_LOCATION = 'media'
-    
+
     # Override static and media URLs in production
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
     MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
