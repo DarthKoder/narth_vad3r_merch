@@ -126,13 +126,13 @@ From the goals outlined above user stories were created to ensure that developme
 
 Schema to show tables in database along with their relation to each other, also included is the allauth-user schema to show custom tables relationship.
 
-<img src="">
+**[Database Schema Here](https://lucid.app/lucidchart/808d5995-54d8-41b8-ae69-c35a23535251/edit?page=0_0&invitationId=inv_3c81c0e6-226f-4ee3-9813-6e3a6adfbce7#)**
 <br><br>
 
 ### Styling
 
  * Colour Scheme
-    * Primary colours used on the website: ![Color Scheme](/starwars_blog/static/img/star-wars-blog-clour-palette.png)
+    * Primary colours used on the website: ![Color Scheme](/media/narth-vad3r-merch-colour-pallette.png)
 
  * Typography
     * 'Orbitron' font is the main font used throughout the site as this is the font that goes with the brands theme. All have sans-serif as its fallback font, in case the imported fonts dont load for any reason.
@@ -491,12 +491,12 @@ After the successful processing of an order, the shopper is automatically redire
 <details>
 <summary>Checkout Success - Desktop</summary>
 <br>
-<img src="documentation/readme_images/checkout-success-desktop.png">
+<img src="/media/checkout-success.png">
 </details>
 <details>
 <summary>Checkout Success - Mobile</summary>
 <br>
-<img src="documentation/readme_images/checkout-success-mobile.png">
+<img src="/media/checkout-success-mobile.png">
 </details>
 <br><br>
 
@@ -778,22 +778,17 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 | Log Out Button.                                       | Logs user out, clears session and redirects to Homepage.                                                                 | Pass.  |
 | Remember Me.                                          | Remember me checkbox remembers the users username when the page is refreshed.                                            | Pass.  |
 | See Full Post CTA.                                    | Redirects to full post.html of specific post.                                                                            | Pass.  |
-| Post Fields.                                          | All post fields can be filled out.                                                                                       | Pass.  |
-| Post Required Fields - No Completed.                  | Will not submit if required fields are empty.                                                                            | Pass.  |
-| Post Submit CTA Button.                               | Submit button works , post successfully posted with flash message.                                                       | Pass.  |
-| Post Edit CTA Button Visibility.                      | Post Owner Only Can See Edit CTA Button.                                                                                 | Pass.  |
-| Post Edit CTA Button - Functions.                     | Post owner can use button and takes them to the edit_post.html and are able to edit all post information.                | Pass.  |
-| Post Edit Submit CTA Button.                          | Once edited , the post owner can submit the post and recieve a flash message of successful post.                         | Pass.  |
-| Post Delete CTA Button Visibility.                    | Post Owner Only Can See Delete CTA Button.                                                                               | Pass.  |
-| Post Delete CTA Button - Functions.                   | Post owner can use button and executes the modal pop up for confirmation.                                                | Pass.  |
-| Comment Visibility.                                   | Comments are visible to users who clicked on specific post.                                                              | Pass.  |
-| Comment Posting - User Not Logged In.                 | Comments are visible to users but will be prompted to login to add a comment.                                            | Pass.  |
-| Comment Posting - User Logged In.                     | Comments are visible and user can add a comment.                                                                         | Pass.  |
-| Comment Posting - Texr Field.                         | Comment text field works as expected.                                                                                    | Pass.  |
-| Comment Posting - Submit CTA button.                  | Comments are successfully posted if user is logged in and required fields are completed, flash message when complete.    | Pass.  |
-| Comment Delete CTA Button - Functions.                | Comment owner can use button and executes the modal pop up for confirmation.                                             | Pass.  |
-| Delete Modal.                                         | Delete button successfully deletes post/comment with flash message of confirmation, cancel button removes the modal.     | Pass.  |
-| Back To Discussion CTA Button.                        | Redirects to hompage.                                                                                                    | Pass.  |
+| Review Fields.                                        | All post fields can be filled out.                                                                                       | Pass.  |
+| ReviewRequired Fields - No Completed.                 | Will not submit if required fields are empty.                                                                            | Pass.  |
+| Review Submit CTA Button.                             | Submit button works , post successfully posted with flash message.                                                       | Pass.  |
+| Review Edit CTA Button Visibility.                    | Review Owner Only Can See Edit CTA Button.                                                                               | Pass.  |
+| Review Edit CTA Button - Functions.                   | Review owner can use button and takes them to the edit_post.html and are able to edit all post information.              | Pass.  |
+| Review Edit Submit CTA Button.                        | Once edited , the post owner can submit the post and recieve a flash message of successful post.                         | Pass.  |
+| Review Delete CTA Button Visibility.                  | Review Owner Only Can See Delete CTA Button.                                                                             | Pass.  |
+| Review Delete CTA Button - Functions.                 | Review owner can use button and executes the modal pop up for confirmation.                                              | Pass.  |
+| Reviews Visibility.                                   | Reviews are visible to users who clicked on specific post.                                                               | Pass.  |
+| Review Delete CTA Button - Functions.                 | Review owner can use button and executes the modal pop up for confirmation.                                              | Pass.  |
+| Delete Message.                                       | Delete button successfully deletes post/comment with flash message of confirmation, cancel button removes the modal.     | Pass.  |
 | Type a non-existent page path.                        | Redirects to 404 page.                                                                                                   | Pass.  |
 | 404 page                                              | Appears as should with navigation back to homepage.                                                                      | Pass.  |
 | 404 page - home button.                               | Redirects to Homepage.                                                                                                   | Pass.  |
@@ -848,7 +843,7 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>Checkout Success Page
 </summary>
 
-![Login Screen Lighthouse](/media/basket-dt-lighthouse.png)
+![Login Screen Lighthouse](/media/checkout-success-dt-lighthouse.png)
 </details>
 
 <details>
@@ -884,35 +879,77 @@ The W3C Markup Validator and W3C CSS Validator services were used to validate ev
 <summary>Home Page
 </summary>
 
-![Homepage Screen Lighthouse Report (index.html)](/starwars_blog/static/img/index-mobile-lighthouse-report.png)
+![Homepage Screen Lighthouse Report](/media/homepage-m-lighthouse.png)
 </details>
 
 <details>
-<summary>Create Post Page
+<summary>Products Page
 </summary>
 
-![Create Post Screen Lighthouse Report (index.html)](/starwars_blog/static/img/create-post-mobile-lighthouse-report.png)
+![Create Post Screen Lighthouse Report](/media/products-m-lighthouse.png)
 </details>
 
 <details>
-<summary>Edit Post Page
+<summary>Product Detail Page
 </summary>
 
-![Edit Post Screen Lighthouse Report (index.html)](/starwars_blog/static/img/edit-post-mobile-lighthouse-report.png)
+![Edit Post Screen Lighthouse Report)](/media/product-detail-m-lighthouse.png)
 </details>
 
 <details>
-<summary>Register Post Page
+<summary>Edit Review Page
 </summary>
 
-![Register Screen Lighthouse Report (index.html)](/starwars_blog/static/img/register-mobile-lighthouse-report.png)
+![Register Screen Lighthouse Report](/media/edit-review-m-lighthouse.png)
 </details>
 
 <details>
-<summary>Login Page
+<summary>Basket Page
 </summary>
 
-![Login Screen Lighthouse Report (index.html)](/starwars_blog/static/img/login-mobile-lighthouse-report.png)
+![Login Screen Lighthouse Report](/media/basket-m-lighthouse.png)
+</details>
+
+<details>
+<summary>Checkout Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/checkout-m-lighthouse.png)
+</details>
+
+<details>
+<summary>Checkout Success Page
+</summary>
+
+![Login Screen Lighthouse](/media/checkout-success-m-lighthouse.png)
+</details>
+
+<details>
+<summary>My Account
+</summary>
+
+![Login Screen Lighthouse Report](/media/my-account-m-lighthouse.png)
+</details>
+
+<details>
+<summary>Sign Up Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/sign-up-m-lighthouse.png)
+</details>
+
+<details>
+<summary>Sign In Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/login-m-lighthouse.png)
+</details>
+
+<details>
+<summary>Logout Page
+</summary>
+
+![Login Screen Lighthouse Report](/media/logout-m-lighthouse.png)
 </details>
 
 ---
@@ -945,24 +982,24 @@ Actual Enviroment variables not disclosed for security.
 ### GitHub Pages
 
 GitHub Pages used to deploy live version of the website.
-1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/star-wars-blog)
+1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/narth_vad3r_merch)
 2. At the top of the Repository(not the main navigation) locate "Settings" button on the menu.
 3. Scroll down the Settings page until you locate "GitHub Pages".
 4. Under "Source", click the dropdown menu "None" and select "Main" and click "Save".
 5. The page will automatically refresh.
-6. Scroll back to locate the now-published site [link](https://darthkoder.github.io/star-wars-blog/) in the "GitHub Pages" section.
+6. Scroll back to locate the now-published site [link](https://github.com/DarthKoder/narth_vad3r_merch) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
 By forking the repository, we make a copy of the original repository on our GitHub account to view and change without affecting the original repository by using these steps:
 
-1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/star-wars-blog)
+1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/narth_vad3r_merch)
 2. At the top of the Repository(under the main navigation) locate "Fork" button.
 3. Now you should have a copy of the original repository in your GitHub account.
 
 ### Local Clone
 
-1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/star-wars-blog)
+1. Log in to GitHub and locate [GitHub Repository Star Wars Discussion Blog](https://github.com/DarthKoder/narth_vad3r_merch)
 2. Under the repository name click "Clone or download"
 3. Click on the code button, select clone with HTTPS, SSH or GitHub CLI and copy the link shown.
 4. Open Git Bash
@@ -976,7 +1013,7 @@ By forking the repository, we make a copy of the original repository on our GitH
 
 ### Code
  * Understanding some JavaScript concepts and code needed for certail aspects of the game [W3schools](https://www.w3schools.com/)
- * The README template was helpfully provided by my mentor Mitko at Code Institute [Lunar-Escape](https://github.com/Thomas-Tomo/Lunar-Escape)
+ * The README template was helpfully provided by my mentor Mitko at Code Institute 
  * Helping with writing and understanding python [Python Tutor](https://pythontutor.com/)
  * Helping with writing and understanding python and find code that was helpful to me [Python Docs](https://docs.python.org/3/contents.html)
 
@@ -996,18 +1033,5 @@ All Media used in the site and README is original.
  * W3schools for the information online when needed. 
  * Python Tutor to help me write and understand python and debug any issues.
  * Slack community for encouragement and information.
- * My motivation for this project was my love for Star Wars and wanted to build something for the community. 
+ * My motivation for this project was my love for Star Wars and my love for streaming and wanted to build something for my online gaming community. 
 <br><br>
-
-## Deployment
-
-For deployment please see the [Deployment](/DEPLOYMENT.md) documentation.
-<br><br>
-
-## Credits
-
-All product information, including images, were sourced from the [Forbidden Planet](https://forbiddenplanet.com/) website.
-
-Hero image was generated at [Ideogram.ai](https://ideogram.ai/) direct link to image [here](https://ideogram.ai/g/yEP-bNcqRSGHJVfzij6GAA/3).
-
-Base that this project was built upon came from Code Institute's Boutique Ado walkthrough project.
