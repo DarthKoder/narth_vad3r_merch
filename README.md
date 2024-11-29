@@ -119,7 +119,7 @@ From the goals outlined above user stories were created to ensure that developme
 
 * Wireframes
     * Figma: Easy to create, uses and shares detailed images whilst also effective.
-    * Please find my wireframes here: [Figma: NARTH-VAD3R-MERCH]()
+    * Please find my wireframes here: [Figma: NARTH-VAD3R-MERCH Wireframes](https://www.figma.com/design/3bpngbRKa1hOoDr93XJkBu/Untitled?node-id=1-2&node-type=canvas&t=RaiKsccqktDh65Fp-0)
 <br><br>
 
 ### Database Schema

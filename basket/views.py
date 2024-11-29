@@ -47,36 +47,48 @@ def add_to_basket(request, item_id):
 
 
 def adjust_basket(request, item_id):
-    """ Remove the item from shopping basket """
-
+    """Adjust the quantity of the specified item in the shopping basket."""
+    
     product = get_object_or_404(Product, pk=item_id)
-    quantity = int(request.POST.get('quantity'))
-    size = None
-    if 'product_size' in request.POST:
-        size = request.POST['product_size']
-        basket = request.session.get('basket', {})
+    try:
+        quantity = int(request.POST.get('quantity'))
+    except (TypeError, ValueError):
+        messages.error(request, 'Invalid quantity provided.')
+        return redirect(reverse('view_basket'))
+    
+    size = request.POST.get('product_size', None)
+    basket = request.session.get('basket', {})  # Ensure basket is initialized here
 
     if size:
+        if item_id not in basket:
+            basket[item_id] = {'items_by_size': {}}
+        
         if quantity > 0:
             basket[item_id]['items_by_size'][size] = quantity
-            messages.success(request, f'Updated size {size.upper()} {product.name} quantity to {basket[item_id] ["items_by_size"] [size]}')
+            messages.success(
+                request, 
+                f'Updated size {size.upper()} {product.name} quantity to {basket[item_id]["items_by_size"][size]}'
+            )
         else:
-            del basket[item_id]['items_by_size'][size]
+            basket[item_id]['items_by_size'].pop(size, None)
             if not basket[item_id]['items_by_size']:
-                basket.pop(item_id)
-                messages.success(request, f'Removed size{size.upper()} {product.name} from your basket')
-
+                basket.pop(item_id, None)
+            messages.success(
+                request, 
+                f'Removed size {size.upper()} {product.name} from your basket'
+            )
     else:
+        # Handling items without sizes
         if quantity > 0:
             basket[item_id] = quantity
-            messages.success(request, f'Updated {product.name} quantity to {basket.item_id}')
-
+            messages.success(request, f'Updated {product.name} quantity to {basket[item_id]}')
         else:
-            basket.pop(item_id)
+            basket.pop(item_id, None)
             messages.success(request, f'Removed {product.name} from your basket')
 
-    request.session['basket'] = basket
+    request.session['basket'] = basket  # Save updated basket to session
     return redirect(reverse('view_basket'))
+
 
 
 def remove_from_basket(request, item_id):
