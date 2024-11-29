@@ -15,6 +15,7 @@ def profile(request):
 
     return render(request, template, context)
 
+
 class CustomConfirmEmailView(ConfirmEmailView):
     template_name = 'email.html'
     pass

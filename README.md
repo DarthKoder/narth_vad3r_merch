@@ -738,7 +738,7 @@ All static CSS files pass CSS Validation at [W3C CSS validation service](https:/
 JS files and scripts on templates run through [JShint](https://jshint.com/) for validation with no errors.
 
 <details>
-<summary>Scripts for update and remove links on Bag template.</summary>
+<summary>Script validation.</summary>
 <br>
 <img src="/media/js-validation.png">
 </details>
@@ -753,211 +753,174 @@ Pylance used during development to detect errors and PEP8 compliance, but code a
 <details>
 <summary>custom-storages.py</summary>
 <br>
-<img src="documentation/python_validation/custom_storages.py-validation.png">
+<img src="/media/custom-storage-py-validation.png">
 </details>
 <details>
 <summary>manage.py</summary>
 <br>
-<img src="documentation/python_validation/manage.py-validation.png">
+<img src="/media/manage-py-validation.png">
 </details>
 
-#### Infinite Realms 
+#### NARTH VAD3R MERCH 
 <details>
 <summary>asgi.py</summary>
 <br>
-<img src="documentation/python_validation/infinite_realms-asgi.py-validation.png">
+<img src="/media/asgi-py-validation.png">
 </details>
 <details>
 <summary>settings.py</summary>
 <br>
-<img src="documentation/python_validation/infinite_realms-settings.py-validation.png">
+<img src="/media/setting-py-validation.png">
 </details>
 <details>
 <summary>urls.py</summary>
 <br>
-<img src="documentation/python_validation/infinite_realms-urls.py-validation.png">
+<img src="/media/urls-py-validation.png">
 </details>
 <details>
 <summary>wsgi.py</summary>
 <br>
-<img src="documentation/python_validation/infinite_realms-wsgi.py-validation.png">
+<img src="/media/wsgi-py-validation.png">
 </details>
 
-#### Infinite Realms 
-<details>
-<summary>asgi.py</summary>
-<br>
-<img src="documentation/python_validation/infinite_realms-asgi.py-validation.png">
-</details>
-<details>
-<summary>settings.py</summary>
-<br>
-<img src="documentation/python_validation/infinite_realms-settings.py-validation.png">
-</details>
-<details>
-<summary>urls.py</summary>
-<br>
-<img src="documentation/python_validation/infinite_realms-urls.py-validation.png">
-</details>
-<details>
-<summary>wsgi.py</summary>
-<br>
-<img src="documentation/python_validation/infinite_realms-wsgi.py-validation.png">
-</details>
-
-#### Bag App
+#### Basket App
 <details>
 <summary>apps.py</summary>
 <br>
-<img src="documentation/python_validation/bag-apps.py-validation.png">
+<img src="/media/basket-apps-py-validation.png">
 </details>
 <details>
 <summary>contexts.py</summary>
 <br>
-<img src="documentation/python_validation/bag-contexts.py-validation.png">
-</details>
-<details>
-<summary>forms.py</summary>
-<br>
-<img src="documentation/python_validation/bag-forms.py-validation.png">
+<img src="/media/basket-contexts-py-validation.png">
 </details>
 <details>
 <summary>urls.py</summary>
 <br>
-<img src="documentation/python_validation/bag-urls.py-validation.png">
+<img src="/media/urls-py-validation.png">
 </details>
 <details>
 <summary>views.py</summary>
 <br>
-<img src="documentation/python_validation/bag-views.py-validation.png">
+<img src="/media/basket-views-py-validation.png">
 </details>
 <details>
 <summary>templatetags/bag_tools.py</summary>
 <br>
-<img src="documentation/python_validation/bag-templatetags-bag_tools.py-validation.png">
+<img src="/media/basket-bagtools-py-validation.png">
 </details>
 
 #### Checkout App
 <details>
 <summary>admin.py</summary>
 <br>
-<img src="documentation/python_validation/checkout-admin.py-validation.png">
+<img src="/media/checkout-admin-py-validation.png">
 </details>
 <details>
 <summary>apps.py</summary>
 <br>
-<img src="documentation/python_validation/checkout-apps.py-validation.png">
+<img src="/media/checkout-apps-py-validation.png">
 </details>
 <details>
 <summary>models.py</summary>
 <br>
-<img src="documentation/python_validation/checkout-models.py-validation.png">
+<img src="/media/checkout-models-py-validation.png">
 </details>
 <details>
 <summary>signals.py</summary>
 <br>
-<img src="documentation/python_validation/checkout-signals.py-validation.png">
+<img src="/media/checkout-signals-py-validation.png">
 </details>
 <details>
 <summary>urls.py</summary>
 <br>
-<img src="documentation/python_validation/checkout-urls.py-validation.png">
+<img src="/media/checkout-urls-py-validation.png">
 </details>
 <details>
 <summary>views.py</summary>
 <br>
-<img src="documentation/python_validation/checkout-views.py-validation.png">
+<img src="/media/checkout-views-py-validation.png">
 </details>
 <details>
 <summary>webhook_handler.py</summary>
 <br>
-<img src="documentation/python_validation/checkout-webhook_handler.py-validation.png">
+<img src="/media/checkout-webhook-handler-py-validation.png">
 </details>
 <details>
 <summary>webhooks.py</summary>
 <br>
-<img src="documentation/python_validation/checkout-webhooks.py-validation.png">
+<img src="/media/checkout-webhooks-py-validation.png">
 </details>
 
 #### Home App
 <details>
 <summary>apps.py</summary>
 <br>
-<img src="documentation/python_validation/home-apps.py-validation.png">
+<img src="/media/home-apps-py-validation.png">
 </details>
 <details>
 <summary>urls.py</summary>
 <br>
-<img src="documentation/python_validation/home-urls.py-validation.png">
+<img src="/media/home-urls-py-validation.png">
 </details>
 <details>
 <summary>views.py</summary>
 <br>
-<img src="documentation/python_validation/home-views.py-validation.png">
+<img src="/media/home-views-py-validation.png">
 </details>
 
 #### Products App
 <details>
 <summary>admin.py</summary>
 <br>
-<img src="documentation/python_validation/products-admin.py-validation.png">
+<img src="/media/product-admin-py-validation.png">
 </details>
 <details>
 <summary>apps.py</summary>
 <br>
-<img src="documentation/python_validation/products-apps.py-validation.png">
+<img src="/media/products-apps-py-validation.png">
 </details>
 <details>
 <summary>forms.py</summary>
 <br>
-<img src="documentation/python_validation/products-forms.py-validation.png">
+<img src="/media/products-forms-py-validation.png">
 </details>
 <details>
 <summary>models.py</summary>
 <br>
-<img src="documentation/python_validation/products-models.py-validation.png">
+<img src="/media/products-models-py-validation.png">
 </details>
 <details>
 <summary>urls.py</summary>
 <br>
-<img src="documentation/python_validation/products-urls,py-validation.png">
+<img src="/media/products-urls-py-validation.png">
 </details>
 <details>
 <summary>views.py</summary>
 <br>
-<img src="documentation/python_validation/products-views.py-validation.png">
-</details>
-<details>
-<summary>widgets.py</summary>
-<br>
-<img src="documentation/python_validation/products-widgets.py-validation.png">
+<img src="/media/products-views-py-validation.png">
 </details>
 
 #### Profiles App
 <details>
 <summary>apps.py</summary>
 <br>
-<img src="documentation/python_validation/profiles-apps.py-validation.png">
-</details>
-<details>
-<summary>forms.py</summary>
-<br>
-<img src="documentation/python_validation/profiles-forms.py-validation.png">
+<img src="/media/profiles-apps-py-validation.png">
 </details>
 <details>
 <summary>models.py</summary>
 <br>
-<img src="documentation/python_validation/profiles-models.py-validation.png">
+<img src="/media/profiles-models-py-validation.png">
 </details>
 <details>
 <summary>urls.py</summary>
 <br>
-<img src="documentation/python_validation/profiles-urls.py-validation.png">
+<img src="/media/profiles-urls-py-validation.png">
 </details>
 <details>
 <summary>views.py</summary>
 <br>
-<img src="documentation/python_validation/profiles-views.py-validation.png">
+<img src="/media/profiles-views-py-validation.png">
 </details>
 
 
@@ -978,9 +941,7 @@ Pylance used during development to detect errors and PEP8 compliance, but code a
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ | ------ |
 | Logo in Navbar.                                       | Redirect to Homepage.                                                                                                    | Pass.  |
 | Nav Links.                                            | Redirect to relevant pages.                                                                                              | Pass.  |
-| Side Nav                                              | Navbar collapes to Sidenav on mobile devices with correct links.                                                         | Pass.  |
 | CTA Login button on Homepage.                         | Redirects to login page.                                                                                                 | Pass.  |
-| Create Post Button                                    | Opens correct create_post.html                                                                                           | Pass.  |
 | Login Form - empty.                                   | Will not submit if empty fields.                                                                                         | Pass.  |
 | Login Form - incorrect username.                      | Form submits but doesn't login, gives falsh message.                                                                     | Pass.  |
 | Login Form - incorrect password.                      | Form submits but doesn't login, gives falsh message.                                                                     | Pass.  |
@@ -1007,6 +968,7 @@ Pylance used during development to detect errors and PEP8 compliance, but code a
 | Type a non-existent page path.                        | Redirects to 404 page.                                                                                                   | Pass.  |
 | 404 page                                              | Appears as should with navigation back to homepage.                                                                      | Pass.  |
 | 404 page - home button.                               | Redirects to Homepage.                                                                                                   | Pass.  |
+| 500 page                                              | Appears as should with navigation back to homepage.                                                                      | Pass.  |
 
 
 ### Lighthouse Report

@@ -12,7 +12,6 @@ import stripe
 import json
 
 
-
 @require_POST
 def cache_checkout_data(request):
     try:
@@ -26,7 +25,6 @@ def cache_checkout_data(request):
         return HttpResponse(status=200)
     except Exception as e:
 
-        
         # Also, display a message to the user
         messages.error(request, 'Sorry, your payment cannot be processed right now. Please try again later.')
         return HttpResponse(content=str(e), status=400)
@@ -99,7 +97,7 @@ def checkout(request):
 
         current_basket = basket_contents(request)
         total = current_basket['grand_total']
-        stripe_total = round(total * 100)  
+        stripe_total = round(total * 100)
         stripe.api_key = stripe_secret_key
         intent = stripe.PaymentIntent.create(
             amount=stripe_total,
@@ -115,9 +113,8 @@ def checkout(request):
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret,  
+        'client_secret': intent.client_secret,
     }
-    
 
     return render(request, template, context)
 

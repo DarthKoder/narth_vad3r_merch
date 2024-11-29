@@ -7,7 +7,6 @@ from .forms import ReviewForm
 
 from .models import Product, Category, Review
 
-# Create your views here.
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -32,7 +31,7 @@ def all_products(request):
                 if direction == 'desc':
                     sortkey = f'-{sortkey}'
             products = products.order_by(sortkey)
-            
+
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             products = products.filter(category__name__in=categories)
@@ -41,10 +40,13 @@ def all_products(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(
+                    request, "You didn't enter any search criteria!"
+                    )
                 return redirect(reverse('products'))
-            
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+
+            queries = Q(
+                name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -70,7 +72,9 @@ def product_detail(request, product_id):
             review.product = product
             review.user = request.user
             review.save()
-            messages.success(request, "Your review has been posted successfully!")
+            messages.success(
+                request, "Your review has been posted successfully!"
+                )
             return redirect('product_detail', product_id=product.id)
     else:
         form = ReviewForm()
@@ -80,12 +84,12 @@ def product_detail(request, product_id):
         'reviews': reviews,
         'form': form,
     })
-    
-    
+
+
 @login_required
 def edit_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
-    
+
     if review.user != request.user:
         return redirect('product_detail', product_id=review.product.id)
 
@@ -93,21 +97,23 @@ def edit_review(request, review_id):
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
             form.save()
-            messages.success(request, "Your review has been updated successfully!")
+            messages.success(
+                request, "Your review has been updated successfully!")
             return redirect('product_detail', product_id=review.product.id)
     else:
         form = ReviewForm(instance=review)
-    return render(request, 'products/edit_review.html', {'form': form, 'review': review})
+    return render(
+        request, 'products/edit_review.html', {'form': form, 'review': review})
 
 
 @login_required
 def delete_review(request, review_id):
     review = get_object_or_404(Review, id=review_id)
-    
+
     # Check if the user is the owner of the review
     if review.user != request.user:
         return redirect('product_detail', product_id=review.product.id)
-    
+
     messages.success(request, "Your review has been deleted successfully!")
     review.delete()
     return redirect('product_detail', product_id=review.product.id)
